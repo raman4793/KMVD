@@ -1,0 +1,9 @@
+<%= simple_form_for @vehicle_fine, :html => { :class => 'form-horizontal' } do |f| %>
+
+  <%= f.association :vehicle %>
+  <%= f.association :fine %>
+
+  <%= f.button :submit, :class => 'btn-primary' %>
+  <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                vehicle_fines_path, :class => 'btn btn-default' %>
+<% end %>

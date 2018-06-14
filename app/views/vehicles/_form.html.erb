@@ -1,0 +1,40 @@
+<div id="number-plate"></div>
+<%= simple_form_for @vehicle, :html => { :class => 'form-horizontal' } do |f| %>
+  <%= f.input :file_name %>
+
+  <%= f.input :name, input_html: { class: 'form-control' } %>
+
+  <%= f.input :model, input_html: { class: 'form-control' }  %>
+
+  <%= f.input :vnumber, input_html: { class: 'form-control' }  %>
+
+  <%= f.association :type, input_html: { class: 'form-control' }  %>
+
+  <%= f.input :insurance_expiry_date, input_html: { class: 'form-control' }  %>
+  <%= f.input :pollution_expiry_date, input_html: { class: 'form-control' }  %>
+
+
+  <%= f.button :submit, :class => 'btn-primary' %>
+  <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                vehicles_path, :class => 'btn btn-default' %>
+<% end %>
+
+<script>
+    $(function() {
+        $("input[type=file]").change(function(){
+            var reader = new FileReader();
+            reader.onload = function(){
+                var img = new Image();
+                img.src = reader.result;
+                img.onload = function(){
+                    document.getElementById('number-plate').innerHTML = ''
+                    document.getElementById('number-plate').appendChild(img)
+                    var string = OCRAD(img);
+                    $('#vehicle_vnumber').val(string)
+                }
+            }
+            reader.readAsDataURL(document.getElementById('vehicle_file_name').files[0])
+
+        });
+    });
+</script>
