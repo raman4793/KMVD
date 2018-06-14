@@ -10,7 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20180614061033) do
+=======
+ActiveRecord::Schema.define(version: 20180407033948) do
+>>>>>>> 298d345999cccd116452ea795bb154ecabdc7090
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -22,6 +26,7 @@ ActiveRecord::Schema.define(version: 20180614061033) do
     t.datetime "updated_at", null: false
   end
 
+<<<<<<< HEAD
   create_table "parkings", force: :cascade do |t|
     t.integer  "spot_id"
     t.integer  "vehicle_id"
@@ -46,6 +51,8 @@ ActiveRecord::Schema.define(version: 20180614061033) do
     t.datetime "updated_at", null: false
   end
 
+=======
+>>>>>>> 298d345999cccd116452ea795bb154ecabdc7090
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
     t.string   "encrypted_password",     default: "", null: false
@@ -77,6 +84,7 @@ ActiveRecord::Schema.define(version: 20180614061033) do
     t.string   "name"
     t.string   "model"
     t.string   "vnumber"
+<<<<<<< HEAD
     t.datetime "insurance_expiry_date"
     t.datetime "pollution_expiry_date"
     t.datetime "created_at",            null: false
@@ -87,6 +95,12 @@ ActiveRecord::Schema.define(version: 20180614061033) do
   add_foreign_key "parkings", "spots"
   add_foreign_key "parkings", "vehicles"
   add_foreign_key "spots", "types"
+=======
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+>>>>>>> 298d345999cccd116452ea795bb154ecabdc7090
   add_foreign_key "vehicle_fines", "fines"
   add_foreign_key "vehicle_fines", "vehicles"
 end

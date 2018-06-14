@@ -6,8 +6,12 @@ class VehiclesController < ApplicationController
   # GET /vehicles
   # GET /vehicles.json
   def index
+<<<<<<< HEAD
     @q = Vehicle.ransack(params[:q])
     @vehicles = @q.result(distinct: true)
+=======
+    @vehicles = Vehicle.all
+>>>>>>> 298d345999cccd116452ea795bb154ecabdc7090
   end
 
   # GET /vehicles/1
@@ -72,6 +76,10 @@ class VehiclesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def vehicle_params
+<<<<<<< HEAD
       params.require(:vehicle).permit(:file_name, :name, :model, :vnumber, :type_id)
+=======
+      params.require(:vehicle).permit(:file_name, :name, :model, :vnumber)
+>>>>>>> 298d345999cccd116452ea795bb154ecabdc7090
     end
 end
