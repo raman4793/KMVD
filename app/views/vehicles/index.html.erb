@@ -2,7 +2,7 @@
 <div class="page-header">
   <h1><%=t '.title', :default => model_class.model_name.human.pluralize.titleize %></h1>
 </div>
-<<<<<<< HEAD
+
 
 <div id="number-plate"></div>
 <%= search_form_for @q do |f| %>
@@ -13,8 +13,7 @@
   <%= f.submit %>
   <input name="myFile" type="file">
 <% end %>
-=======
->>>>>>> 298d345999cccd116452ea795bb154ecabdc7090
+<br>
 <table class="table table-striped" id="vehicles">
   <thead>
     <tr>
@@ -31,7 +30,7 @@
     <% @vehicles.each do |vehicle| %>
       <tr>
         <td><%= link_to vehicle.id, vehicle_path(vehicle) %></td>
-        <td><%= vehicle.file_name %></td>
+        <td><%= image_tag vehicle.file_name, width: 200, height: 50 %></td>
         <td><%= vehicle.name %></td>
         <td><%= vehicle.model %></td>
         <td><%= vehicle.vnumber %></td>
@@ -59,7 +58,7 @@
     $('#vehicles').DataTable({
         responsive: true
     });
-<<<<<<< HEAD
+
 </script>
 
 <script>
@@ -79,6 +78,4 @@
 
         });
     });
-=======
->>>>>>> 298d345999cccd116452ea795bb154ecabdc7090
 </script>
