@@ -13569,3 +13569,54 @@ Processing by ParkingsController#index as HTML
 Completed 200 OK in 47ms (Views: 44.4ms | ActiveRecord: 1.5ms)
 
 
+Started GET "/" for 127.0.0.1 at 2018-06-23 18:42:56 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from <class:VehiclesController> at /home/ram/Downloads/KMVD/app/controllers/vehicles_controller.rb:4)
+Processing by VehiclesController#index as HTML
+  Rendering vehicles/index.html.erb within layouts/application
+  [1m[36mVehicle Load (0.3ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles"[0m
+  Rendered vehicles/index.html.erb within layouts/application (28.7ms)
+  Rendered layouts/_navbar_guest.html.erb (0.4ms)
+  Rendered layouts/_navbar.html.erb (2.5ms)
+Completed 200 OK in 367ms (Views: 358.5ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/spots" for 127.0.0.1 at 2018-06-23 18:43:02 +0530
+Processing by SpotsController#index as HTML
+  Rendering spots/index.html.erb within layouts/application
+  [1m[36mSpot Load (0.6ms)[0m  [1m[34mSELECT "spots".* FROM "spots"[0m
+  Rendered spots/index.html.erb within layouts/application (12.6ms)
+  Rendered layouts/_navbar_guest.html.erb (0.3ms)
+  Rendered layouts/_navbar.html.erb (1.0ms)
+Completed 200 OK in 53ms (Views: 45.6ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/spots/new" for 127.0.0.1 at 2018-06-23 18:43:04 +0530
+Processing by SpotsController#new as HTML
+  Rendering spots/new.html.erb within layouts/application
+  [1m[36mType Load (0.5ms)[0m  [1m[34mSELECT "types".* FROM "types"[0m
+  Rendered spots/_form.html.erb (106.4ms)
+  Rendered spots/new.html.erb within layouts/application (108.0ms)
+  Rendered layouts/_navbar_guest.html.erb (0.3ms)
+  Rendered layouts/_navbar.html.erb (1.0ms)
+Completed 200 OK in 178ms (Views: 141.2ms | ActiveRecord: 4.9ms)
+
+
+Started POST "/spots" for 127.0.0.1 at 2018-06-23 18:43:08 +0530
+Processing by SpotsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yLUQFDiWHCALCRhQwziC+9370wVPlIyPTAh85npoWhgLd3f9oxEWyilryGbt/uEYjET84RRW6yG5goQLWDDw7Q==", "spot"=>{"name"=>"", "free"=>"0", "type_id"=>"1"}, "commit"=>"Create Spot"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+RuntimeError ():
+  
+app/controllers/spots_controller.rb:27:in `create'
+  Rendering /var/lib/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /var/lib/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.5ms)
+  Rendering /var/lib/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendering /var/lib/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (18.5ms)
