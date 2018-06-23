@@ -13185,3 +13185,387 @@ Processing by ParkingsController#new as HTML
 Completed 200 OK in 63ms (Views: 55.1ms | ActiveRecord: 3.7ms)
 
 
+Started GET "/" for 127.0.0.1 at 2018-06-23 18:07:02 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (16.8ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from <class:VehiclesController> at /home/ram/Downloads/KMVD/app/controllers/vehicles_controller.rb:4)
+Processing by VehiclesController#index as HTML
+  Rendering vehicles/index.html.erb within layouts/application
+  [1m[36mVehicle Load (25.7ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles"[0m
+  Rendered vehicles/index.html.erb within layouts/application (297.5ms)
+  Rendered layouts/_navbar.html.erb (15.4ms)
+Completed 500 Internal Server Error in 1417ms (ActiveRecord: 165.5ms)
+
+
+  
+ActionView::Template::Error (Missing partial vehicles/_navbar_guest, application/_navbar_guest with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/home/ram/Downloads/KMVD/app/views"
+  * "/var/lib/gems/2.3.0/gems/twitter-bootstrap-rails-4.0.0/app/views"
+  * "/var/lib/gems/2.3.0/gems/devise-4.4.3/app/views"
+):
+    1: <% if current_user %>
+    2:   <%= render 'navbar_user' %>
+    3: <% else %>
+    4:   <%= render 'navbar_guest' %>
+    5: <% end %>
+  
+app/views/layouts/_navbar.html.erb:4:in `_app_views_layouts__navbar_html_erb__1249014964859110264_45264220'
+app/views/layouts/application.html.erb:13:in `_app_views_layouts_application_html_erb__65585502981924193_69820868900820'
+  Rendering /var/lib/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /var/lib/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.7ms)
+  Rendering /var/lib/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendering /var/lib/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.5ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (21.7ms)
+Started GET "/" for 127.0.0.1 at 2018-06-23 18:08:53 +0530
+Processing by VehiclesController#index as HTML
+  Rendering vehicles/index.html.erb within layouts/application
+  [1m[36mVehicle Load (0.3ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles"[0m
+  Rendered vehicles/index.html.erb within layouts/application (6.5ms)
+  Rendered layouts/_navbar_guest.html.erb (0.2ms)
+  Rendered layouts/_navbar.html.erb (1.0ms)
+Completed 200 OK in 44ms (Views: 42.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-23 18:12:19 +0530
+Processing by VehiclesController#index as HTML
+  Rendering vehicles/index.html.erb within layouts/application
+  [1m[36mVehicle Load (0.5ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles"[0m
+  Rendered vehicles/index.html.erb within layouts/application (6.4ms)
+  Rendered layouts/_navbar_guest.html.erb (0.2ms)
+  Rendered layouts/_navbar.html.erb (0.9ms)
+Completed 200 OK in 44ms (Views: 42.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-23 18:13:13 +0530
+Processing by VehiclesController#index as HTML
+  Rendering vehicles/index.html.erb within layouts/application
+  [1m[36mVehicle Load (0.2ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles"[0m
+  Rendered vehicles/index.html.erb within layouts/application (4.4ms)
+  Rendered layouts/_navbar_guest.html.erb (0.2ms)
+  Rendered layouts/_navbar.html.erb (0.9ms)
+Completed 200 OK in 41ms (Views: 40.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-23 18:13:54 +0530
+Processing by VehiclesController#index as HTML
+  Rendering vehicles/index.html.erb within layouts/application
+  [1m[36mVehicle Load (0.6ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles"[0m
+  Rendered vehicles/index.html.erb within layouts/application (7.8ms)
+  Rendered layouts/_navbar_guest.html.erb (0.2ms)
+  Rendered layouts/_navbar.html.erb (1.0ms)
+Completed 200 OK in 51ms (Views: 49.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-23 18:16:55 +0530
+Processing by VehiclesController#index as HTML
+  Rendering vehicles/index.html.erb within layouts/application
+  [1m[36mVehicle Load (0.3ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles"[0m
+  Rendered vehicles/index.html.erb within layouts/application (6.6ms)
+  Rendered layouts/_navbar_guest.html.erb (0.2ms)
+  Rendered layouts/_navbar.html.erb (0.9ms)
+Completed 200 OK in 40ms (Views: 38.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-23 18:18:15 +0530
+Processing by VehiclesController#index as HTML
+  Rendering vehicles/index.html.erb within layouts/application
+  [1m[36mVehicle Load (0.3ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles"[0m
+  Rendered vehicles/index.html.erb within layouts/application (5.0ms)
+  Rendered layouts/_navbar_guest.html.erb (0.3ms)
+  Rendered layouts/_navbar.html.erb (1.4ms)
+Completed 200 OK in 40ms (Views: 38.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-06-23 18:18:22 +0530
+Processing by Devise::SessionsController#new as HTML
+  Rendering /var/lib/gems/2.3.0/gems/devise-4.4.3/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /var/lib/gems/2.3.0/gems/devise-4.4.3/app/views/devise/shared/_links.html.erb (1.3ms)
+  Rendered /var/lib/gems/2.3.0/gems/devise-4.4.3/app/views/devise/sessions/new.html.erb within layouts/application (24.8ms)
+  Rendered layouts/_navbar_guest.html.erb (0.3ms)
+  Rendered layouts/_navbar.html.erb (1.2ms)
+Completed 200 OK in 81ms (Views: 67.0ms | ActiveRecord: 4.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-23 18:19:54 +0530
+Processing by VehiclesController#index as HTML
+  Rendering vehicles/index.html.erb within layouts/application
+  [1m[36mVehicle Load (0.3ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles"[0m
+  Rendered vehicles/index.html.erb within layouts/application (5.6ms)
+  Rendered layouts/_navbar_guest.html.erb (1.2ms)
+  Rendered layouts/_navbar.html.erb (2.0ms)
+Completed 200 OK in 46ms (Views: 44.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-23 18:20:15 +0530
+Processing by VehiclesController#index as HTML
+  Rendering vehicles/index.html.erb within layouts/application
+  [1m[36mVehicle Load (0.3ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles"[0m
+  Rendered vehicles/index.html.erb within layouts/application (5.5ms)
+  Rendered layouts/_navbar_guest.html.erb (0.2ms)
+  Rendered layouts/_navbar.html.erb (1.0ms)
+Completed 200 OK in 40ms (Views: 38.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-06-23 18:20:20 +0530
+Processing by Devise::SessionsController#new as HTML
+  Rendering /var/lib/gems/2.3.0/gems/devise-4.4.3/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /var/lib/gems/2.3.0/gems/devise-4.4.3/app/views/devise/shared/_links.html.erb (0.5ms)
+  Rendered /var/lib/gems/2.3.0/gems/devise-4.4.3/app/views/devise/sessions/new.html.erb within layouts/application (3.5ms)
+  Rendered layouts/_navbar_guest.html.erb (0.2ms)
+  Rendered layouts/_navbar.html.erb (0.9ms)
+Completed 200 OK in 44ms (Views: 42.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2018-06-23 18:20:28 +0530
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering /var/lib/gems/2.3.0/gems/devise-4.4.3/app/views/devise/registrations/new.html.erb within layouts/application
+  Rendered /var/lib/gems/2.3.0/gems/devise-4.4.3/app/views/devise/shared/_links.html.erb (1.2ms)
+  Rendered /var/lib/gems/2.3.0/gems/devise-4.4.3/app/views/devise/registrations/new.html.erb within layouts/application (5.5ms)
+  Rendered layouts/_navbar_guest.html.erb (0.3ms)
+  Rendered layouts/_navbar.html.erb (1.0ms)
+Completed 200 OK in 46ms (Views: 45.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-06-23 18:20:47 +0530
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+W8uPwFa7LOyjsdvGhSeQehUEp00/ldI0EOl4eKfZlZVW0aYVnwXVNe3DSHVLxau7zk0GLZF+Um0IAIg64peRw==", "user"=>{"email"=>"admin@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (46.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "admin@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  Rendering /var/lib/gems/2.3.0/gems/devise-4.4.3/app/views/devise/registrations/new.html.erb within layouts/application
+  Rendered /var/lib/gems/2.3.0/gems/devise-4.4.3/app/views/devise/shared/_links.html.erb (0.7ms)
+  Rendered /var/lib/gems/2.3.0/gems/devise-4.4.3/app/views/devise/registrations/new.html.erb within layouts/application (4.3ms)
+  Rendered layouts/_navbar_guest.html.erb (0.3ms)
+  Rendered layouts/_navbar.html.erb (1.0ms)
+Completed 200 OK in 226ms (Views: 44.3ms | ActiveRecord: 46.4ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-06-23 18:20:50 +0530
+Processing by Devise::SessionsController#new as HTML
+  Rendering /var/lib/gems/2.3.0/gems/devise-4.4.3/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /var/lib/gems/2.3.0/gems/devise-4.4.3/app/views/devise/shared/_links.html.erb (1.1ms)
+  Rendered /var/lib/gems/2.3.0/gems/devise-4.4.3/app/views/devise/sessions/new.html.erb within layouts/application (5.1ms)
+  Rendered layouts/_navbar_guest.html.erb (0.2ms)
+  Rendered layouts/_navbar.html.erb (0.9ms)
+Completed 200 OK in 46ms (Views: 44.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2018-06-23 18:20:57 +0530
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ruseKREYVrRnF1oq0sa27rFkIhcqILlabXEwBQLhff0C33aORj6tUwIukGQd/T4BtgkEkqibF1sJEpfEC/RF7A==", "user"=>{"email"=>"admin@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "admin@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = $1, "sign_in_count" = $2, "updated_at" = $3 WHERE "users"."id" = $4[0m  [["current_sign_in_at", "2018-06-23 12:50:57.886292"], ["sign_in_count", 2], ["updated_at", "2018-06-23 12:50:57.887120"], ["id", 1]]
+  [1m[35m (25.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 144ms (ActiveRecord: 26.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-23 18:20:57 +0530
+Processing by VehiclesController#index as HTML
+  Rendering vehicles/index.html.erb within layouts/application
+  [1m[36mVehicle Load (0.4ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles"[0m
+  Rendered vehicles/index.html.erb within layouts/application (4.8ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_navbar_user.html.erb (0.2ms)
+  Rendered layouts/_navbar.html.erb (2.1ms)
+Completed 200 OK in 38ms (Views: 36.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-23 18:21:55 +0530
+Processing by VehiclesController#index as HTML
+  Rendering vehicles/index.html.erb within layouts/application
+  [1m[36mVehicle Load (0.3ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles"[0m
+  Rendered vehicles/index.html.erb within layouts/application (5.9ms)
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_navbar_user.html.erb (0.3ms)
+  Rendered layouts/_navbar.html.erb (2.4ms)
+Completed 200 OK in 51ms (Views: 48.4ms | ActiveRecord: 1.1ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2018-06-23 18:21:57 +0530
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"aICjS3ZQJuxlbrIb/V6BuekAvgODw5KGJcP7Bk4gR+3XnAhWaavVbxYRwVCT2D/WyVJZ2SC8c5/sS/G+ulEDtQ=="}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 42ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-23 18:21:57 +0530
+Processing by VehiclesController#index as HTML
+  Rendering vehicles/index.html.erb within layouts/application
+  [1m[36mVehicle Load (0.3ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles"[0m
+  Rendered vehicles/index.html.erb within layouts/application (6.8ms)
+  Rendered layouts/_navbar_guest.html.erb (0.3ms)
+  Rendered layouts/_navbar.html.erb (1.0ms)
+Completed 200 OK in 48ms (Views: 46.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-06-23 18:21:58 +0530
+Processing by Devise::SessionsController#new as HTML
+  Rendering /var/lib/gems/2.3.0/gems/devise-4.4.3/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /var/lib/gems/2.3.0/gems/devise-4.4.3/app/views/devise/shared/_links.html.erb (1.1ms)
+  Rendered /var/lib/gems/2.3.0/gems/devise-4.4.3/app/views/devise/sessions/new.html.erb within layouts/application (5.1ms)
+  Rendered layouts/_navbar_guest.html.erb (0.2ms)
+  Rendered layouts/_navbar.html.erb (0.9ms)
+Completed 200 OK in 43ms (Views: 42.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2018-06-23 18:22:05 +0530
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fy435yNsjeZxg5sHzyu5DDu+IDGI3uXMOAShREsfMpQP4eD4A0Es33LjlzI/U4c1vgF3hlhVL0Ap/iG6WgwuWA==", "user"=>{"email"=>"admin@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "admin@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = $1, "last_sign_in_at" = $2, "sign_in_count" = $3, "updated_at" = $4 WHERE "users"."id" = $5[0m  [["current_sign_in_at", "2018-06-23 12:52:05.795675"], ["last_sign_in_at", "2018-06-23 12:50:57.886292"], ["sign_in_count", 3], ["updated_at", "2018-06-23 12:52:05.796493"], ["id", 1]]
+  [1m[35m (12.5ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 116ms (ActiveRecord: 13.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-23 18:22:05 +0530
+Processing by VehiclesController#index as HTML
+  Rendering vehicles/index.html.erb within layouts/application
+  [1m[36mVehicle Load (0.3ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles"[0m
+  Rendered vehicles/index.html.erb within layouts/application (4.9ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_navbar_user.html.erb (0.3ms)
+  Rendered layouts/_navbar.html.erb (2.1ms)
+Completed 200 OK in 49ms (Views: 47.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-06-23 18:23:24 +0530
+Processing by VehiclesController#index as HTML
+  Rendering vehicles/index.html.erb within layouts/application
+  [1m[36mVehicle Load (0.3ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles"[0m
+  Rendered vehicles/index.html.erb within layouts/application (5.6ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_navbar_user.html.erb (0.8ms)
+  Rendered layouts/_navbar.html.erb (2.4ms)
+Completed 500 Internal Server Error in 41ms (ActiveRecord: 0.6ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"vehicles"} missing required keys: [:id]):
+    19:         <li><%= link_to 'Parkings' ,parkings_path%></li>
+    20:         <li><%= link_to 'Spots' ,spots_path%></li>
+    21:         <li><%= link_to 'Fines' ,fines_path%></li>
+    22:         <li><%= link_to 'Vehicles' ,vehicle_path%></li>
+    23:         <li><%= link_to 'Logout' ,destroy_user_session_path, method: :delete%></li>
+    24: 
+    25:       </ul>
+  
+app/views/layouts/_navbar_user.html.erb:22:in `_app_views_layouts__navbar_user_html_erb__1321036335782820075_69820801855580'
+app/views/layouts/_navbar.html.erb:2:in `_app_views_layouts__navbar_html_erb__1249014964859110264_69820908607260'
+app/views/layouts/application.html.erb:13:in `_app_views_layouts_application_html_erb__65585502981924193_69820905462300'
+  Rendering /var/lib/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /var/lib/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.5ms)
+  Rendering /var/lib/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendering /var/lib/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.4ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (13.3ms)
+Started GET "/" for 127.0.0.1 at 2018-06-23 18:23:30 +0530
+Processing by VehiclesController#index as HTML
+  Rendering vehicles/index.html.erb within layouts/application
+  [1m[36mVehicle Load (0.5ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles"[0m
+  Rendered vehicles/index.html.erb within layouts/application (7.7ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_navbar_user.html.erb (0.4ms)
+  Rendered layouts/_navbar.html.erb (2.1ms)
+Completed 200 OK in 46ms (Views: 44.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/parkings" for 127.0.0.1 at 2018-06-23 18:23:32 +0530
+Processing by ParkingsController#index as HTML
+  Rendering parkings/index.html.erb within layouts/application
+  [1m[36mParking Load (29.1ms)[0m  [1m[34mSELECT "parkings".* FROM "parkings"[0m
+  Rendered parkings/index.html.erb within layouts/application (34.4ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_navbar_user.html.erb (0.5ms)
+  Rendered layouts/_navbar.html.erb (2.3ms)
+Completed 200 OK in 83ms (Views: 48.3ms | ActiveRecord: 31.5ms)
+
+
+Started GET "/spots" for 127.0.0.1 at 2018-06-23 18:23:33 +0530
+Processing by SpotsController#index as HTML
+  Rendering spots/index.html.erb within layouts/application
+  [1m[36mSpot Load (15.6ms)[0m  [1m[34mSELECT "spots".* FROM "spots"[0m
+  Rendered spots/index.html.erb within layouts/application (29.3ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_navbar_user.html.erb (0.4ms)
+  Rendered layouts/_navbar.html.erb (2.2ms)
+Completed 200 OK in 76ms (Views: 53.2ms | ActiveRecord: 20.4ms)
+
+
+Started GET "/fines" for 127.0.0.1 at 2018-06-23 18:23:34 +0530
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from <class:FinesController> at /home/ram/Downloads/KMVD/app/controllers/fines_controller.rb:3)
+Processing by FinesController#index as HTML
+  Rendering fines/index.html.erb within layouts/application
+  [1m[36mFine Load (1.0ms)[0m  [1m[34mSELECT "fines".* FROM "fines"[0m
+  Rendered fines/index.html.erb within layouts/application (5.9ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_navbar_user.html.erb (0.4ms)
+  Rendered layouts/_navbar.html.erb (2.1ms)
+Completed 200 OK in 75ms (Views: 44.9ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/vehicles" for 127.0.0.1 at 2018-06-23 18:23:35 +0530
+Processing by VehiclesController#index as HTML
+  Rendering vehicles/index.html.erb within layouts/application
+  [1m[36mVehicle Load (0.2ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles"[0m
+  Rendered vehicles/index.html.erb within layouts/application (4.6ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_navbar_user.html.erb (0.4ms)
+  Rendered layouts/_navbar.html.erb (2.1ms)
+Completed 200 OK in 43ms (Views: 41.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/vehicles" for 127.0.0.1 at 2018-06-23 18:23:58 +0530
+Processing by VehiclesController#index as HTML
+  Rendering vehicles/index.html.erb within layouts/application
+  [1m[36mVehicle Load (0.3ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles"[0m
+  Rendered vehicles/index.html.erb within layouts/application (5.4ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_navbar_user.html.erb (0.4ms)
+  Rendered layouts/_navbar.html.erb (2.4ms)
+Completed 200 OK in 45ms (Views: 42.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/types" for 127.0.0.1 at 2018-06-23 18:23:59 +0530
+Processing by TypesController#index as HTML
+  Rendering types/index.html.erb within layouts/application
+  [1m[36mType Load (44.9ms)[0m  [1m[34mSELECT "types".* FROM "types"[0m
+  Rendered types/index.html.erb within layouts/application (57.9ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_navbar_user.html.erb (0.6ms)
+  Rendered layouts/_navbar.html.erb (2.6ms)
+Completed 200 OK in 125ms (Views: 51.6ms | ActiveRecord: 47.6ms)
+
+
+Started GET "/parkings" for 127.0.0.1 at 2018-06-23 18:24:02 +0530
+Processing by ParkingsController#index as HTML
+  Rendering parkings/index.html.erb within layouts/application
+  [1m[36mParking Load (0.4ms)[0m  [1m[34mSELECT "parkings".* FROM "parkings"[0m
+  Rendered parkings/index.html.erb within layouts/application (3.5ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_navbar_user.html.erb (0.5ms)
+  Rendered layouts/_navbar.html.erb (2.3ms)
+Completed 200 OK in 53ms (Views: 51.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/parkings" for 127.0.0.1 at 2018-06-23 18:24:36 +0530
+Processing by ParkingsController#index as HTML
+  Rendering parkings/index.html.erb within layouts/application
+  [1m[36mParking Load (0.5ms)[0m  [1m[34mSELECT "parkings".* FROM "parkings"[0m
+  Rendered parkings/index.html.erb within layouts/application (3.6ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_navbar_user.html.erb (0.5ms)
+  Rendered layouts/_navbar.html.erb (2.8ms)
+Completed 200 OK in 47ms (Views: 44.4ms | ActiveRecord: 1.5ms)
+
+
