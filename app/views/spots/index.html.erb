@@ -18,8 +18,14 @@
       <tr>
         <td><%= link_to spot.id, spot_path(spot) %></td>
         <td><%= spot.name %></td>
-        <td><%= spot.free %></td>
-        <td><%= spot.type_id %></td>
+        <td><%=
+                if spot.availability?
+                  'Available'
+                else
+                  'Not Available'
+            end%>
+        </td>
+        <td><%= spot.type.name %></td>
         <td><%=l spot.created_at %></td>
         <td>
           <%= link_to t('.show', :default => t("helpers.links.show")),

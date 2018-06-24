@@ -1,6 +1,6 @@
 <%= simple_form_for @spot, :html => { :class => 'form-horizontal' } do |f| %>
   <%= f.input :name %>
-  <%= f.input :free %>
+  <%= f.input :availability %>
   <%= f.association :type %>
 
   <%= f.button :submit, :class => 'btn-primary' %>

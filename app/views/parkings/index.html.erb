@@ -8,6 +8,7 @@
       <th><%= model_class.human_attribute_name(:id) %></th>
       <th><%= model_class.human_attribute_name(:spot_id) %></th>
       <th><%= model_class.human_attribute_name(:vehicle_id) %></th>
+      <th><%= model_class.human_attribute_name(:currently_occupied) %></th>
       <th><%= model_class.human_attribute_name(:created_at) %></th>
       <th><%=t '.actions', :default => t("helpers.actions") %></th>
     </tr>
@@ -16,8 +17,9 @@
     <% @parkings.each do |parking| %>
       <tr>
         <td><%= link_to parking.id, parking_path(parking) %></td>
-        <td><%= parking.spot_id %></td>
-        <td><%= parking.vehicle_id %></td>
+        <td><%= link_to parking.spot.name, spot_path(parking.spot) %></td>
+        <td><%= link_to parking.vehicle.name + ' ' + parking.vehicle.vnumber, vehicle_path(parking.vehicle) %></td>
+        <td><%= parking.occupied %></td>
         <td><%=l parking.created_at %></td>
         <td>
           <%= link_to t('.show', :default => t("helpers.links.show")),

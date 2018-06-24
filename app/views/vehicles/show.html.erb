@@ -12,8 +12,55 @@
   <dd><%= @vehicle.model %></dd>
   <dt><strong><%= model_class.human_attribute_name(:vnumber) %>:</strong></dt>
   <dd><%= @vehicle.vnumber %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:insurance_expiry_date) %>:</strong></dt>
+  <dd><%= @vehicle.insurance_expiry_date %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:pollution_expiry_date) %>:</strong></dt>
+  <dd><%= @vehicle.pollution_expiry_date %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:type) %>:</strong></dt>
+  <dd><%= @vehicle.type.name %></dd>
 </dl>
-
+<% if @vehicle.parked? %>
+  <% parking = @vehicle.parkings.find_by(occupied: true) %>
+  <%= form_for parking do |f| %>
+    <%= f.hidden_field :occupied, value: false %>
+    <%= f.submit 'free space' %>
+  <% end %>
+<% else %>
+  <table class="table table-striped" id="spots">
+    <thead>
+    <tr>
+      <th><%= model_class.human_attribute_name(:id) %></th>
+      <th><%= model_class.human_attribute_name(:name) %></th>
+      <th><%= model_class.human_attribute_name(:free) %></th>
+      <th><%= model_class.human_attribute_name(:type_id) %></th>
+      <th><%=t '.actions', :default => t("helpers.actions") %></th>
+    </tr>
+    </thead>
+    <tbody>
+    <% Spot.where(type: @vehicle.type).each do |spot| %>
+      <tr>
+        <td><%= link_to spot.id, spot_path(spot) %></td>
+        <td><%= spot.name %></td>
+        <td><%=
+          if spot.availability?
+            'Available'
+          else
+            'Not Available'
+          end%>
+        </td>
+        <td><%= spot.type.name %></td>
+        <td>
+          <%= form_for Parking.new do |f| %>
+            <%= f.hidden_field :spot_id, value: spot.id %>
+            <%= f.hidden_field :vehicle_id, value: @vehicle.id %>
+            <%= f.submit 'Park Here' %>
+          <% end %>
+        </td>
+      </tr>
+    <% end %>
+    </tbody>
+  </table>
+<% end %>
 <%= link_to t('.back', :default => t("helpers.links.back")),
               vehicles_path, :class => 'btn btn-default'  %>
 <%= link_to t('.edit', :default => t("helpers.links.edit")),

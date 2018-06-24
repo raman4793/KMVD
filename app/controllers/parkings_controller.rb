@@ -25,7 +25,6 @@ class ParkingsController < ApplicationController
   # POST /parkings.json
   def create
     @parking = Parking.new(parking_params)
-
     respond_to do |format|
       if @parking.save
         format.html { redirect_to @parking, notice: 'Parking was successfully created.' }
@@ -69,6 +68,6 @@ class ParkingsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def parking_params
-      params.require(:parking).permit(:spot_id, :vehicle_id)
+      params.require(:parking).permit(:spot_id, :vehicle_id, :occupied)
     end
 end

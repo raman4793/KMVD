@@ -11,3 +11,15 @@ Fine.create(reason: 'No Helmet', amt: 500)
 Fine.create(reason: 'No License', amt: 1000)
 Fine.create(reason: 'No RC', amt: 1500)
 Fine.create(reason: 'Drunk Driving', amt: 500)
+
+Type.create(name: 'Two Wheelers')
+Type.create(name: 'Cars')
+Type.create(name: 'Heavy vehicles')
+
+Spot.create(name: 'A1', availability: true, type: Type.find(rand(2)+1))
+Spot.create(name: 'A2', availability: true, type: Type.find(rand(2)+1))
+Spot.create(name: 'B1', availability: true, type: Type.find(rand(2)+1))
+Spot.create(name: 'B2', availability: true, type: Type.find(rand(2)+1))
+Spot.create(name: 'C1', availability: true, type: Type.find(rand(2)+1))
+Spot.create(name: 'C2', availability: true, type: Type.find(rand(2)+1))
+

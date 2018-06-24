@@ -10,10 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-
-ActiveRecord::Schema.define(version: 20180614061033) do
-
-ActiveRecord::Schema.define(version: 20180407033948) do
+ActiveRecord::Schema.define(version: 20180624030026) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -28,18 +25,19 @@ ActiveRecord::Schema.define(version: 20180407033948) do
   create_table "parkings", force: :cascade do |t|
     t.integer  "spot_id"
     t.integer  "vehicle_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",                null: false
+    t.datetime "updated_at",                null: false
+    t.boolean  "occupied",   default: true
     t.index ["spot_id"], name: "index_parkings_on_spot_id", using: :btree
     t.index ["vehicle_id"], name: "index_parkings_on_vehicle_id", using: :btree
   end
 
   create_table "spots", force: :cascade do |t|
     t.string   "name"
-    t.boolean  "free"
+    t.boolean  "availability"
     t.integer  "type_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
     t.index ["type_id"], name: "index_spots_on_type_id", using: :btree
   end
 
@@ -80,22 +78,17 @@ ActiveRecord::Schema.define(version: 20180407033948) do
     t.string   "name"
     t.string   "model"
     t.string   "vnumber"
-
     t.datetime "insurance_expiry_date"
     t.datetime "pollution_expiry_date"
-    t.datetime "created_at",            null: false
-    t.datetime "updated_at",            null: false
+    t.datetime "created_at",                            null: false
+    t.datetime "updated_at",                            null: false
     t.integer  "type_id"
+    t.boolean  "parked",                default: false
   end
 
   add_foreign_key "parkings", "spots"
   add_foreign_key "parkings", "vehicles"
   add_foreign_key "spots", "types"
-
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   add_foreign_key "vehicle_fines", "fines"
   add_foreign_key "vehicle_fines", "vehicles"
 end
