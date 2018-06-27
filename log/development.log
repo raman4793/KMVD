@@ -1,0 +1,261 @@
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (323.1ms)[0m  [1m[35mDROP DATABASE IF EXISTS "KMVD_development"[0m
+  [1m[35m (322.6ms)[0m  [1m[35mDROP DATABASE IF EXISTS "KMVD_test"[0m
+  [1m[35m (787.4ms)[0m  [1m[35mCREATE DATABASE "KMVD_development" ENCODING = 'unicode'[0m
+  [1m[35m (789.2ms)[0m  [1m[35mCREATE DATABASE "KMVD_test" ENCODING = 'unicode'[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (147.2ms)[0m  [1m[35mCREATE TABLE "fines" ("id" serial primary key, "reason" character varying, "amt" float, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (65.2ms)[0m  [1m[35mCREATE TABLE "parkings" ("id" serial primary key, "spot_id" integer, "vehicle_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "occupied" boolean DEFAULT 't')[0m
+  [1m[35m (64.8ms)[0m  [1m[35mCREATE  INDEX  "index_parkings_on_spot_id" ON "parkings" USING btree ("spot_id")[0m
+  [1m[35m (65.1ms)[0m  [1m[35mCREATE  INDEX  "index_parkings_on_vehicle_id" ON "parkings" USING btree ("vehicle_id")[0m
+  [1m[35m (110.0ms)[0m  [1m[35mCREATE TABLE "spots" ("id" serial primary key, "name" character varying, "availability" boolean, "type_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (64.7ms)[0m  [1m[35mCREATE  INDEX  "index_spots_on_type_id" ON "spots" USING btree ("type_id")[0m
+  [1m[35m (132.4ms)[0m  [1m[35mCREATE TABLE "types" ("id" serial primary key, "name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (98.3ms)[0m  [1m[35mCREATE TABLE "users" ("id" serial primary key, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" timestamp, "last_sign_in_at" timestamp, "current_sign_in_ip" inet, "last_sign_in_ip" inet, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (75.9ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_email" ON "users" USING btree ("email")[0m
+  [1m[35m (53.8ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_reset_password_token" ON "users" USING btree ("reset_password_token")[0m
+  [1m[35m (54.6ms)[0m  [1m[35mCREATE TABLE "vehicle_fines" ("id" serial primary key, "vehicle_id" integer, "fine_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (53.7ms)[0m  [1m[35mCREATE  INDEX  "index_vehicle_fines_on_fine_id" ON "vehicle_fines" USING btree ("fine_id")[0m
+  [1m[35m (54.0ms)[0m  [1m[35mCREATE  INDEX  "index_vehicle_fines_on_vehicle_id" ON "vehicle_fines" USING btree ("vehicle_id")[0m
+  [1m[35m (98.4ms)[0m  [1m[35mCREATE TABLE "vehicles" ("id" serial primary key, "file_name" character varying, "name" character varying, "model" character varying, "vnumber" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "type_id" integer, "parked" boolean DEFAULT 'f', "chassis_number" character varying, "engine_number" character varying, "year_of_registration" integer, "fuel_type" character varying, "dealer_name" character varying, "class_of_vehicle" character varying, "insurance_expiry_date" timestamp, "pollution_expiry_date" timestamp)[0m
+  [1m[35m (10.6ms)[0m  [1m[35mALTER TABLE "parkings" ADD CONSTRAINT "fk_rails_00f3bf4dc2"
+FOREIGN KEY ("spot_id")
+  REFERENCES "spots" ("id")
+[0m
+  [1m[35m (10.8ms)[0m  [1m[35mALTER TABLE "parkings" ADD CONSTRAINT "fk_rails_61ca7ddaef"
+FOREIGN KEY ("vehicle_id")
+  REFERENCES "vehicles" ("id")
+[0m
+  [1m[35m (10.6ms)[0m  [1m[35mALTER TABLE "spots" ADD CONSTRAINT "fk_rails_c2d97f6f5a"
+FOREIGN KEY ("type_id")
+  REFERENCES "types" ("id")
+[0m
+  [1m[35m (10.8ms)[0m  [1m[35mALTER TABLE "vehicle_fines" ADD CONSTRAINT "fk_rails_39b91a4b83"
+FOREIGN KEY ("fine_id")
+  REFERENCES "fines" ("id")
+[0m
+  [1m[35m (10.6ms)[0m  [1m[35mALTER TABLE "vehicle_fines" ADD CONSTRAINT "fk_rails_e2ea46a9e8"
+FOREIGN KEY ("vehicle_id")
+  REFERENCES "vehicles" ("id")
+[0m
+  [1m[35m (132.3ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying PRIMARY KEY)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (10.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20180627045500)[0m
+  [1m[35m (11.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20180627043330),
+(20180624025858),
+(20180407033730),
+(20180624030026),
+(20180407033322),
+(20180407033948),
+(20180614060442),
+(20180614060506),
+(20180407033805),
+(20180614060619),
+(20180614061033);
+
+[0m
+  [1m[35m (109.6ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-06-27 05:02:21.015196"], ["updated_at", "2018-06-27 05:02:21.015196"]]
+  [1m[35m (3.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (124.9ms)[0m  [1m[35mCREATE TABLE "fines" ("id" serial primary key, "reason" character varying, "amt" float, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (76.4ms)[0m  [1m[35mCREATE TABLE "parkings" ("id" serial primary key, "spot_id" integer, "vehicle_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "occupied" boolean DEFAULT 't')[0m
+  [1m[35m (64.5ms)[0m  [1m[35mCREATE  INDEX  "index_parkings_on_spot_id" ON "parkings" USING btree ("spot_id")[0m
+  [1m[35m (65.3ms)[0m  [1m[35mCREATE  INDEX  "index_parkings_on_vehicle_id" ON "parkings" USING btree ("vehicle_id")[0m
+  [1m[35m (121.3ms)[0m  [1m[35mCREATE TABLE "spots" ("id" serial primary key, "name" character varying, "availability" boolean, "type_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (65.0ms)[0m  [1m[35mCREATE  INDEX  "index_spots_on_type_id" ON "spots" USING btree ("type_id")[0m
+  [1m[35m (111.3ms)[0m  [1m[35mCREATE TABLE "types" ("id" serial primary key, "name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (120.5ms)[0m  [1m[35mCREATE TABLE "users" ("id" serial primary key, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" timestamp, "last_sign_in_at" timestamp, "current_sign_in_ip" inet, "last_sign_in_ip" inet, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (64.7ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_email" ON "users" USING btree ("email")[0m
+  [1m[35m (65.0ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_reset_password_token" ON "users" USING btree ("reset_password_token")[0m
+  [1m[35m (76.7ms)[0m  [1m[35mCREATE TABLE "vehicle_fines" ("id" serial primary key, "vehicle_id" integer, "fine_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (53.9ms)[0m  [1m[35mCREATE  INDEX  "index_vehicle_fines_on_fine_id" ON "vehicle_fines" USING btree ("fine_id")[0m
+  [1m[35m (64.9ms)[0m  [1m[35mCREATE  INDEX  "index_vehicle_fines_on_vehicle_id" ON "vehicle_fines" USING btree ("vehicle_id")[0m
+  [1m[35m (109.8ms)[0m  [1m[35mCREATE TABLE "vehicles" ("id" serial primary key, "file_name" character varying, "name" character varying, "model" character varying, "vnumber" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "type_id" integer, "parked" boolean DEFAULT 'f', "chassis_number" character varying, "engine_number" character varying, "year_of_registration" integer, "fuel_type" character varying, "dealer_name" character varying, "class_of_vehicle" character varying, "insurance_expiry_date" timestamp, "pollution_expiry_date" timestamp)[0m
+  [1m[35m (10.6ms)[0m  [1m[35mALTER TABLE "parkings" ADD CONSTRAINT "fk_rails_00f3bf4dc2"
+FOREIGN KEY ("spot_id")
+  REFERENCES "spots" ("id")
+[0m
+  [1m[35m (11.0ms)[0m  [1m[35mALTER TABLE "parkings" ADD CONSTRAINT "fk_rails_61ca7ddaef"
+FOREIGN KEY ("vehicle_id")
+  REFERENCES "vehicles" ("id")
+[0m
+  [1m[35m (10.5ms)[0m  [1m[35mALTER TABLE "spots" ADD CONSTRAINT "fk_rails_c2d97f6f5a"
+FOREIGN KEY ("type_id")
+  REFERENCES "types" ("id")
+[0m
+  [1m[35m (10.6ms)[0m  [1m[35mALTER TABLE "vehicle_fines" ADD CONSTRAINT "fk_rails_39b91a4b83"
+FOREIGN KEY ("fine_id")
+  REFERENCES "fines" ("id")
+[0m
+  [1m[35m (11.0ms)[0m  [1m[35mALTER TABLE "vehicle_fines" ADD CONSTRAINT "fk_rails_e2ea46a9e8"
+FOREIGN KEY ("vehicle_id")
+  REFERENCES "vehicles" ("id")
+[0m
+  [1m[35m (109.8ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying PRIMARY KEY)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (10.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20180627045500)[0m
+  [1m[35m (10.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20180627043330),
+(20180624025858),
+(20180407033730),
+(20180624030026),
+(20180407033322),
+(20180407033948),
+(20180614060442),
+(20180614060506),
+(20180407033805),
+(20180614060619),
+(20180614061033);
+
+[0m
+  [1m[35m (109.9ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-06-27 05:02:22.546946"], ["updated_at", "2018-06-27 05:02:22.546946"]]
+  [1m[35m (7.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2018-06-27 05:02:22.558092"], ["key", "environment"]]
+  [1m[35m (7.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(8049875993771153430);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddAvailabilityToSpots (20180627050153)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "spots" ADD "availability" boolean[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_advisory_unlock(8049875993771153430)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (1521.5ms)[0m  [1m[35mDROP DATABASE IF EXISTS "KMVD_development"[0m
+  [1m[35m (321.1ms)[0m  [1m[35mDROP DATABASE IF EXISTS "KMVD_test"[0m
+  [1m[35m (763.5ms)[0m  [1m[35mCREATE DATABASE "KMVD_development" ENCODING = 'unicode'[0m
+  [1m[35m (831.1ms)[0m  [1m[35mCREATE DATABASE "KMVD_test" ENCODING = 'unicode'[0m
+  [1m[35m (117.5ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-06-27 05:02:45.332061"], ["updated_at", "2018-06-27 05:02:45.332061"]]
+  [1m[35m (3.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (129.9ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "test"], ["created_at", "2018-06-27 05:02:45.484410"], ["updated_at", "2018-06-27 05:02:45.484410"]]
+  [1m[35m (7.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (121.4ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying PRIMARY KEY)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(8049875993771153430);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateVehicles (20180407033322)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (88.1ms)[0m  [1m[35mCREATE TABLE "vehicles" ("id" serial primary key, "file_name" character varying, "name" character varying, "model" character varying, "vnumber" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180407033322"]]
+  [1m[35m (10.8ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateFines (20180407033730)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (96.4ms)[0m  [1m[35mCREATE TABLE "fines" ("id" serial primary key, "reason" character varying, "amt" float, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180407033730"]]
+  [1m[35m (23.3ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateVehicleFines (20180407033805)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (64.2ms)[0m  [1m[35mCREATE TABLE "vehicle_fines" ("id" serial primary key, "vehicle_id" integer, "fine_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, CONSTRAINT "fk_rails_e2ea46a9e8"
+FOREIGN KEY ("vehicle_id")
+  REFERENCES "vehicles" ("id")
+, CONSTRAINT "fk_rails_39b91a4b83"
+FOREIGN KEY ("fine_id")
+  REFERENCES "fines" ("id")
+)[0m
+  [1m[35m (41.9ms)[0m  [1m[35mCREATE  INDEX  "index_vehicle_fines_on_vehicle_id" ON "vehicle_fines"  ("vehicle_id")[0m
+  [1m[35m (43.2ms)[0m  [1m[35mCREATE  INDEX  "index_vehicle_fines_on_fine_id" ON "vehicle_fines"  ("fine_id")[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180407033805"]]
+  [1m[35m (11.3ms)[0m  [1m[35mCOMMIT[0m
+Migrating to DeviseCreateUsers (20180407033948)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (108.1ms)[0m  [1m[35mCREATE TABLE "users" ("id" serial primary key, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" timestamp, "last_sign_in_at" timestamp, "current_sign_in_ip" inet, "last_sign_in_ip" inet, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (31.9ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")[0m
+  [1m[35m (31.8ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_reset_password_token" ON "users"  ("reset_password_token")[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180407033948"]]
+  [1m[35m (21.2ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateTypes (20180614060442)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (99.2ms)[0m  [1m[35mCREATE TABLE "types" ("id" serial primary key, "name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180614060442"]]
+  [1m[35m (20.6ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateSpots (20180614060506)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (77.8ms)[0m  [1m[35mCREATE TABLE "spots" ("id" serial primary key, "name" character varying, "type_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, CONSTRAINT "fk_rails_c2d97f6f5a"
+FOREIGN KEY ("type_id")
+  REFERENCES "types" ("id")
+)[0m
+  [1m[35m (31.6ms)[0m  [1m[35mCREATE  INDEX  "index_spots_on_type_id" ON "spots"  ("type_id")[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180614060506"]]
+  [1m[35m (19.9ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateParkings (20180614060619)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (45.2ms)[0m  [1m[35mCREATE TABLE "parkings" ("id" serial primary key, "spot_id" integer, "vehicle_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, CONSTRAINT "fk_rails_00f3bf4dc2"
+FOREIGN KEY ("spot_id")
+  REFERENCES "spots" ("id")
+, CONSTRAINT "fk_rails_61ca7ddaef"
+FOREIGN KEY ("vehicle_id")
+  REFERENCES "vehicles" ("id")
+)[0m
+  [1m[35m (64.3ms)[0m  [1m[35mCREATE  INDEX  "index_parkings_on_spot_id" ON "parkings"  ("spot_id")[0m
+  [1m[35m (43.0ms)[0m  [1m[35mCREATE  INDEX  "index_parkings_on_vehicle_id" ON "parkings"  ("vehicle_id")[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180614060619"]]
+  [1m[35m (18.9ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddTypeIdToVehicles (20180614061033)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "vehicles" ADD "type_id" integer[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180614061033"]]
+  [1m[35m (8.8ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddValidToParkings (20180624025858)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (168.9ms)[0m  [1m[35mALTER TABLE "parkings" ADD "occupied" boolean DEFAULT 't'[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180624025858"]]
+  [1m[35m (17.8ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddParkedToVehicles (20180624030026)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (93.1ms)[0m  [1m[35mALTER TABLE "vehicles" ADD "parked" boolean DEFAULT 'f'[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180624030026"]]
+  [1m[35m (15.3ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddChassisNumberToVehicles (20180627043330)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "vehicles" ADD "chassis_number" character varying[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "vehicles" ADD "engine_number" character varying[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "vehicles" ADD "year_of_registration" integer[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "vehicles" ADD "fuel_type" character varying[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "vehicles" ADD "dealer_name" character varying[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "vehicles" ADD "class_of_vehicle" character varying[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180627043330"]]
+  [1m[35m (6.7ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddInsuranceToVehicle (20180627045500)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "vehicles" ADD "insurance_expiry_date" timestamp[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "vehicles" ADD "pollution_expiry_date" timestamp[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180627045500"]]
+  [1m[35m (8.6ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddAvailabilityToSpots (20180627050153)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "spots" ADD "availability" boolean[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180627050153"]]
+  [1m[35m (9.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(8049875993771153430)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
