@@ -5,8 +5,6 @@ class CreateVehicles < ActiveRecord::Migration[5.0]
       t.string :name
       t.string :model
       t.string :vnumber
-      t.datetime :insurance_expiry_date
-      t.datetime :pollution_expiry_date
 
       t.timestamps
     end
