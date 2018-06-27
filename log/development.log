@@ -17180,3 +17180,22 @@ Processing by VehiclesController#show as HTML
 Completed 200 OK in 47ms (Views: 45.2ms | ActiveRecord: 0.9ms)
 
 
+Started GET "/vehicles/1" for 127.0.0.1 at 2018-06-27 09:53:14 +0530
+Processing by VehiclesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mVehicle Load (0.2ms)[0m  [1m[34mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering vehicles/show.html.erb within layouts/application
+  [1m[36mType Load (0.2ms)[0m  [1m[34mSELECT  "types".* FROM "types" WHERE "types"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mVehicleFine Load (0.2ms)[0m  [1m[34mSELECT "vehicle_fines".* FROM "vehicle_fines" WHERE "vehicle_fines"."vehicle_id" = $1[0m  [["vehicle_id", 1]]
+  [1m[36mFine Load (0.2ms)[0m  [1m[34mSELECT  "fines".* FROM "fines" WHERE "fines"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mSpot Load (0.2ms)[0m  [1m[34mSELECT "spots".* FROM "spots" WHERE "spots"."type_id" = 2[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "types".* FROM "types" WHERE "types"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "types".* FROM "types" WHERE "types"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "types".* FROM "types" WHERE "types"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "types".* FROM "types" WHERE "types"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered vehicles/show.html.erb within layouts/application (9.9ms)
+  Rendered layouts/_navbar_guest.html.erb (0.2ms)
+  Rendered layouts/_navbar.html.erb (0.8ms)
+Completed 200 OK in 45ms (Views: 42.3ms | ActiveRecord: 1.1ms)
+
+
