@@ -17199,3 +17199,585 @@ Processing by VehiclesController#show as HTML
 Completed 200 OK in 45ms (Views: 42.3ms | ActiveRecord: 1.1ms)
 
 
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (5007.5ms)[0m  [1m[35mDROP DATABASE IF EXISTS "KMVD_development"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(8049875993771153430);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddChassisNumberToVehicles (20180627043330)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.5ms)[0m  [1m[35mALTER TABLE "vehicles" ADD "chassis_number" character varying[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(8049875993771153430)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(8049875993771153430);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddChassisNumberToVehicles (20180627043330)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.5ms)[0m  [1m[35mALTER TABLE "vehicles" ADD "chassis_number" character varying[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(8049875993771153430)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (5007.2ms)[0m  [1m[35mDROP DATABASE IF EXISTS "KMVD_development"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (218.8ms)[0m  [1m[35mDROP DATABASE IF EXISTS "KMVD_development"[0m
+  [1m[35m (95.8ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying PRIMARY KEY)[0m
+  [1m[35m (97.4ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(8049875993771153430);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateVehicles (20180407033322)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (100.2ms)[0m  [1m[35mCREATE TABLE "vehicles" ("id" serial primary key, "file_name" character varying, "name" character varying, "model" character varying, "vnumber" character varying, "insurance_expiry_date" timestamp, "pollution_expiry_date" timestamp, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180407033322"]]
+  [1m[35m (14.2ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateFines (20180407033730)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (82.0ms)[0m  [1m[35mCREATE TABLE "fines" ("id" serial primary key, "reason" character varying, "amt" float, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180407033730"]]
+  [1m[35m (15.8ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateVehicleFines (20180407033805)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (49.6ms)[0m  [1m[35mCREATE TABLE "vehicle_fines" ("id" serial primary key, "vehicle_id" integer, "fine_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, CONSTRAINT "fk_rails_e2ea46a9e8"
+FOREIGN KEY ("vehicle_id")
+  REFERENCES "vehicles" ("id")
+, CONSTRAINT "fk_rails_39b91a4b83"
+FOREIGN KEY ("fine_id")
+  REFERENCES "fines" ("id")
+)[0m
+  [1m[35m (41.9ms)[0m  [1m[35mCREATE  INDEX  "index_vehicle_fines_on_vehicle_id" ON "vehicle_fines"  ("vehicle_id")[0m
+  [1m[35m (43.1ms)[0m  [1m[35mCREATE  INDEX  "index_vehicle_fines_on_fine_id" ON "vehicle_fines"  ("fine_id")[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180407033805"]]
+  [1m[35m (15.1ms)[0m  [1m[35mCOMMIT[0m
+Migrating to DeviseCreateUsers (20180407033948)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (93.3ms)[0m  [1m[35mCREATE TABLE "users" ("id" serial primary key, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" timestamp, "last_sign_in_at" timestamp, "current_sign_in_ip" inet, "last_sign_in_ip" inet, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (42.8ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")[0m
+  [1m[35m (42.8ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_reset_password_token" ON "users"  ("reset_password_token")[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180407033948"]]
+  [1m[35m (14.1ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateTypes (20180614060442)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (84.3ms)[0m  [1m[35mCREATE TABLE "types" ("id" serial primary key, "name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180614060442"]]
+  [1m[35m (13.3ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateSpots (20180614060506)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (97.4ms)[0m  [1m[35mCREATE TABLE "spots" ("id" serial primary key, "name" character varying, "availability" boolean, "type_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, CONSTRAINT "fk_rails_c2d97f6f5a"
+FOREIGN KEY ("type_id")
+  REFERENCES "types" ("id")
+)[0m
+  [1m[35m (42.7ms)[0m  [1m[35mCREATE  INDEX  "index_spots_on_type_id" ON "spots"  ("type_id")[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180614060506"]]
+  [1m[35m (23.7ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateParkings (20180614060619)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (52.5ms)[0m  [1m[35mCREATE TABLE "parkings" ("id" serial primary key, "spot_id" integer, "vehicle_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, CONSTRAINT "fk_rails_00f3bf4dc2"
+FOREIGN KEY ("spot_id")
+  REFERENCES "spots" ("id")
+, CONSTRAINT "fk_rails_61ca7ddaef"
+FOREIGN KEY ("vehicle_id")
+  REFERENCES "vehicles" ("id")
+)[0m
+  [1m[35m (42.1ms)[0m  [1m[35mCREATE  INDEX  "index_parkings_on_spot_id" ON "parkings"  ("spot_id")[0m
+  [1m[35m (32.2ms)[0m  [1m[35mCREATE  INDEX  "index_parkings_on_vehicle_id" ON "parkings"  ("vehicle_id")[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180614060619"]]
+  [1m[35m (11.6ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddTypeIdToVehicles (20180614061033)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "vehicles" ADD "type_id" integer[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180614061033"]]
+  [1m[35m (8.8ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddValidToParkings (20180624025858)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (120.9ms)[0m  [1m[35mALTER TABLE "parkings" ADD "occupied" boolean DEFAULT 't'[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180624025858"]]
+  [1m[35m (10.5ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddParkedToVehicles (20180624030026)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (88.0ms)[0m  [1m[35mALTER TABLE "vehicles" ADD "parked" boolean DEFAULT 'f'[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180624030026"]]
+  [1m[35m (9.4ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddChassisNumberToVehicles (20180627043330)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "vehicles" ADD "chassis_number" character varying[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "vehicles" ADD "engine_number" character varying[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "vehicles" ADD "year_of_registration" integer[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "vehicles" ADD "fuel_type" character varying[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "vehicles" ADD "dealer_name" character varying[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "vehicles" ADD "class_of_vehicle" character varying[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180627043330"]]
+  [1m[35m (6.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-06-27 04:41:46.457063"], ["updated_at", "2018-06-27 04:41:46.457063"]]
+  [1m[35m (12.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(8049875993771153430)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "admin@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "admin@gmail.com"], ["encrypted_password", "$2a$11$BrFJj9LBq/Ash8.O0Dc9j.Fk3MNg6iN4hzKBBRoTmsPXqsbOvRWLm"], ["created_at", "2018-06-27 04:41:59.439328"], ["updated_at", "2018-06-27 04:41:59.439328"]]
+  [1m[35m (12.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "fines" ("reason", "amt", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["reason", "No Helmet"], ["amt", 500.0], ["created_at", "2018-06-27 04:41:59.462720"], ["updated_at", "2018-06-27 04:41:59.462720"]]
+  [1m[35m (11.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "fines" ("reason", "amt", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["reason", "No License"], ["amt", 1000.0], ["created_at", "2018-06-27 04:41:59.475595"], ["updated_at", "2018-06-27 04:41:59.475595"]]
+  [1m[35m (9.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "fines" ("reason", "amt", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["reason", "No RC"], ["amt", 1500.0], ["created_at", "2018-06-27 04:41:59.486704"], ["updated_at", "2018-06-27 04:41:59.486704"]]
+  [1m[35m (9.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "fines" ("reason", "amt", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["reason", "Drunk Driving"], ["amt", 500.0], ["created_at", "2018-06-27 04:41:59.497733"], ["updated_at", "2018-06-27 04:41:59.497733"]]
+  [1m[35m (9.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "types" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Two Wheelers"], ["created_at", "2018-06-27 04:41:59.517382"], ["updated_at", "2018-06-27 04:41:59.517382"]]
+  [1m[35m (11.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "types" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Cars"], ["created_at", "2018-06-27 04:41:59.530964"], ["updated_at", "2018-06-27 04:41:59.530964"]]
+  [1m[35m (10.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "types" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Heavy vehicles"], ["created_at", "2018-06-27 04:41:59.542145"], ["updated_at", "2018-06-27 04:41:59.542145"]]
+  [1m[35m (9.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mType Load (0.2ms)[0m  [1m[34mSELECT  "types".* FROM "types" WHERE "types"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "spots" ("name", "availability", "type_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "A1"], ["availability", "t"], ["type_id", 1], ["created_at", "2018-06-27 04:41:59.569617"], ["updated_at", "2018-06-27 04:41:59.569617"]]
+  [1m[35m (3.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mType Load (0.2ms)[0m  [1m[34mSELECT  "types".* FROM "types" WHERE "types"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "spots" ("name", "availability", "type_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "A2"], ["availability", "t"], ["type_id", 2], ["created_at", "2018-06-27 04:41:59.575834"], ["updated_at", "2018-06-27 04:41:59.575834"]]
+  [1m[35m (9.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mType Load (0.2ms)[0m  [1m[34mSELECT  "types".* FROM "types" WHERE "types"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "spots" ("name", "availability", "type_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "B1"], ["availability", "t"], ["type_id", 2], ["created_at", "2018-06-27 04:41:59.586874"], ["updated_at", "2018-06-27 04:41:59.586874"]]
+  [1m[35m (9.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mType Load (0.2ms)[0m  [1m[34mSELECT  "types".* FROM "types" WHERE "types"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "spots" ("name", "availability", "type_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "B2"], ["availability", "t"], ["type_id", 1], ["created_at", "2018-06-27 04:41:59.598316"], ["updated_at", "2018-06-27 04:41:59.598316"]]
+  [1m[35m (8.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mType Load (0.2ms)[0m  [1m[34mSELECT  "types".* FROM "types" WHERE "types"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "spots" ("name", "availability", "type_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "C1"], ["availability", "t"], ["type_id", 1], ["created_at", "2018-06-27 04:41:59.609328"], ["updated_at", "2018-06-27 04:41:59.609328"]]
+  [1m[35m (9.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mType Load (0.2ms)[0m  [1m[34mSELECT  "types".* FROM "types" WHERE "types"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "spots" ("name", "availability", "type_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "C2"], ["availability", "t"], ["type_id", 2], ["created_at", "2018-06-27 04:41:59.620391"], ["updated_at", "2018-06-27 04:41:59.620391"]]
+  [1m[35m (9.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mType Load (0.2ms)[0m  [1m[34mSELECT  "types".* FROM "types" WHERE "types"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "vehicles" ("file_name", "name", "model", "vnumber", "insurance_expiry_date", "pollution_expiry_date", "created_at", "updated_at", "type_id", "chassis_number", "engine_number", "year_of_registration", "fuel_type", "dealer_name") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14) RETURNING "id"[0m  [["file_name", "1.jpg"], ["name", "Honda Civic"], ["model", "Sedan"], ["vnumber", "XYZ0123456"], ["insurance_expiry_date", "2018-06-27 04:41:59.635541"], ["pollution_expiry_date", "2018-06-27 04:41:59.635556"], ["created_at", "2018-06-27 04:41:59.653349"], ["updated_at", "2018-06-27 04:41:59.653349"], ["type_id", 2], ["chassis_number", "MBLHA11ERA9H03384"], ["engine_number", "HA11EDA9H03528"], ["year_of_registration", 2011], ["fuel_type", "Petrol"], ["dealer_name", "Pothens"]]
+  [1m[35m (23.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (621.3ms)[0m  [1m[35mDROP DATABASE IF EXISTS "KMVD_development"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP DATABASE IF EXISTS "KMVD_test"[0m
+  [1m[35m (774.8ms)[0m  [1m[35mCREATE DATABASE "KMVD_development" ENCODING = 'unicode'[0m
+  [1m[35m (798.4ms)[0m  [1m[35mCREATE DATABASE "KMVD_test" ENCODING = 'unicode'[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (115.2ms)[0m  [1m[35mCREATE TABLE "fines" ("id" serial primary key, "reason" character varying, "amt" float, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (54.3ms)[0m  [1m[35mCREATE TABLE "parkings" ("id" serial primary key, "spot_id" integer, "vehicle_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "occupied" boolean DEFAULT 't')[0m
+  [1m[35m (230.4ms)[0m  [1m[35mCREATE  INDEX  "index_parkings_on_spot_id" ON "parkings" USING btree ("spot_id")[0m
+  [1m[35m (53.7ms)[0m  [1m[35mCREATE  INDEX  "index_parkings_on_vehicle_id" ON "parkings" USING btree ("vehicle_id")[0m
+  [1m[35m (111.5ms)[0m  [1m[35mCREATE TABLE "spots" ("id" serial primary key, "name" character varying, "availability" boolean, "type_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (53.8ms)[0m  [1m[35mCREATE  INDEX  "index_spots_on_type_id" ON "spots" USING btree ("type_id")[0m
+  [1m[35m (109.8ms)[0m  [1m[35mCREATE TABLE "types" ("id" serial primary key, "name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (120.5ms)[0m  [1m[35mCREATE TABLE "users" ("id" serial primary key, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" timestamp, "last_sign_in_at" timestamp, "current_sign_in_ip" inet, "last_sign_in_ip" inet, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (64.6ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_email" ON "users" USING btree ("email")[0m
+  [1m[35m (65.0ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_reset_password_token" ON "users" USING btree ("reset_password_token")[0m
+  [1m[35m (76.6ms)[0m  [1m[35mCREATE TABLE "vehicle_fines" ("id" serial primary key, "vehicle_id" integer, "fine_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (64.7ms)[0m  [1m[35mCREATE  INDEX  "index_vehicle_fines_on_fine_id" ON "vehicle_fines" USING btree ("fine_id")[0m
+  [1m[35m (65.0ms)[0m  [1m[35mCREATE  INDEX  "index_vehicle_fines_on_vehicle_id" ON "vehicle_fines" USING btree ("vehicle_id")[0m
+  [1m[35m (120.9ms)[0m  [1m[35mCREATE TABLE "vehicles" ("id" serial primary key, "file_name" character varying, "name" character varying, "model" character varying, "vnumber" character varying, "insurance_expiry_date" timestamp, "pollution_expiry_date" timestamp, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "type_id" integer, "parked" boolean DEFAULT 'f', "chassis_number" character varying, "engine_number" character varying, "year_of_registration" integer, "fuel_type" character varying, "dealer_name" character varying, "class_of_vehicle" character varying)[0m
+  [1m[35m (10.5ms)[0m  [1m[35mALTER TABLE "parkings" ADD CONSTRAINT "fk_rails_00f3bf4dc2"
+FOREIGN KEY ("spot_id")
+  REFERENCES "spots" ("id")
+[0m
+  [1m[35m (10.8ms)[0m  [1m[35mALTER TABLE "parkings" ADD CONSTRAINT "fk_rails_61ca7ddaef"
+FOREIGN KEY ("vehicle_id")
+  REFERENCES "vehicles" ("id")
+[0m
+  [1m[35m (10.6ms)[0m  [1m[35mALTER TABLE "spots" ADD CONSTRAINT "fk_rails_c2d97f6f5a"
+FOREIGN KEY ("type_id")
+  REFERENCES "types" ("id")
+[0m
+  [1m[35m (11.0ms)[0m  [1m[35mALTER TABLE "vehicle_fines" ADD CONSTRAINT "fk_rails_39b91a4b83"
+FOREIGN KEY ("fine_id")
+  REFERENCES "fines" ("id")
+[0m
+  [1m[35m (10.4ms)[0m  [1m[35mALTER TABLE "vehicle_fines" ADD CONSTRAINT "fk_rails_e2ea46a9e8"
+FOREIGN KEY ("vehicle_id")
+  REFERENCES "vehicles" ("id")
+[0m
+  [1m[35m (110.1ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying PRIMARY KEY)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (9.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20180627043330)[0m
+  [1m[35m (10.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20180624025858),
+(20180407033730),
+(20180624030026),
+(20180407033322),
+(20180407033948),
+(20180614060442),
+(20180614060506),
+(20180407033805),
+(20180614060619),
+(20180614061033);
+
+[0m
+  [1m[35m (109.8ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-06-27 04:42:36.912524"], ["updated_at", "2018-06-27 04:42:36.912524"]]
+  [1m[35m (3.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (124.5ms)[0m  [1m[35mCREATE TABLE "fines" ("id" serial primary key, "reason" character varying, "amt" float, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (65.3ms)[0m  [1m[35mCREATE TABLE "parkings" ("id" serial primary key, "spot_id" integer, "vehicle_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "occupied" boolean DEFAULT 't')[0m
+  [1m[35m (64.7ms)[0m  [1m[35mCREATE  INDEX  "index_parkings_on_spot_id" ON "parkings" USING btree ("spot_id")[0m
+  [1m[35m (64.9ms)[0m  [1m[35mCREATE  INDEX  "index_parkings_on_vehicle_id" ON "parkings" USING btree ("vehicle_id")[0m
+  [1m[35m (99.1ms)[0m  [1m[35mCREATE TABLE "spots" ("id" serial primary key, "name" character varying, "availability" boolean, "type_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (53.7ms)[0m  [1m[35mCREATE  INDEX  "index_spots_on_type_id" ON "spots" USING btree ("type_id")[0m
+  [1m[35m (132.6ms)[0m  [1m[35mCREATE TABLE "types" ("id" serial primary key, "name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (98.1ms)[0m  [1m[35mCREATE TABLE "users" ("id" serial primary key, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" timestamp, "last_sign_in_at" timestamp, "current_sign_in_ip" inet, "last_sign_in_ip" inet, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (53.6ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_email" ON "users" USING btree ("email")[0m
+  [1m[35m (53.9ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_reset_password_token" ON "users" USING btree ("reset_password_token")[0m
+  [1m[35m (54.6ms)[0m  [1m[35mCREATE TABLE "vehicle_fines" ("id" serial primary key, "vehicle_id" integer, "fine_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (53.6ms)[0m  [1m[35mCREATE  INDEX  "index_vehicle_fines_on_fine_id" ON "vehicle_fines" USING btree ("fine_id")[0m
+  [1m[35m (65.1ms)[0m  [1m[35mCREATE  INDEX  "index_vehicle_fines_on_vehicle_id" ON "vehicle_fines" USING btree ("vehicle_id")[0m
+  [1m[35m (109.6ms)[0m  [1m[35mCREATE TABLE "vehicles" ("id" serial primary key, "file_name" character varying, "name" character varying, "model" character varying, "vnumber" character varying, "insurance_expiry_date" timestamp, "pollution_expiry_date" timestamp, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "type_id" integer, "parked" boolean DEFAULT 'f', "chassis_number" character varying, "engine_number" character varying, "year_of_registration" integer, "fuel_type" character varying, "dealer_name" character varying, "class_of_vehicle" character varying)[0m
+  [1m[35m (10.8ms)[0m  [1m[35mALTER TABLE "parkings" ADD CONSTRAINT "fk_rails_00f3bf4dc2"
+FOREIGN KEY ("spot_id")
+  REFERENCES "spots" ("id")
+[0m
+  [1m[35m (10.5ms)[0m  [1m[35mALTER TABLE "parkings" ADD CONSTRAINT "fk_rails_61ca7ddaef"
+FOREIGN KEY ("vehicle_id")
+  REFERENCES "vehicles" ("id")
+[0m
+  [1m[35m (10.7ms)[0m  [1m[35mALTER TABLE "spots" ADD CONSTRAINT "fk_rails_c2d97f6f5a"
+FOREIGN KEY ("type_id")
+  REFERENCES "types" ("id")
+[0m
+  [1m[35m (10.9ms)[0m  [1m[35mALTER TABLE "vehicle_fines" ADD CONSTRAINT "fk_rails_39b91a4b83"
+FOREIGN KEY ("fine_id")
+  REFERENCES "fines" ("id")
+[0m
+  [1m[35m (10.7ms)[0m  [1m[35mALTER TABLE "vehicle_fines" ADD CONSTRAINT "fk_rails_e2ea46a9e8"
+FOREIGN KEY ("vehicle_id")
+  REFERENCES "vehicles" ("id")
+[0m
+  [1m[35m (110.1ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying PRIMARY KEY)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (10.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20180627043330)[0m
+  [1m[35m (10.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20180624025858),
+(20180407033730),
+(20180624030026),
+(20180407033322),
+(20180407033948),
+(20180614060442),
+(20180614060506),
+(20180407033805),
+(20180614060619),
+(20180614061033);
+
+[0m
+  [1m[35m (131.9ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-06-27 04:42:38.375866"], ["updated_at", "2018-06-27 04:42:38.375866"]]
+  [1m[35m (7.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2018-06-27 04:42:38.387079"], ["key", "environment"]]
+  [1m[35m (7.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "admin@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "admin@gmail.com"], ["encrypted_password", "$2a$11$0BTl0w398ux.G3lQi8vymuNK8I.BatUlE5/gnjs9XSRSfjfd7kxca"], ["created_at", "2018-06-27 04:42:38.524031"], ["updated_at", "2018-06-27 04:42:38.524031"]]
+  [1m[35m (3.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "fines" ("reason", "amt", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["reason", "No Helmet"], ["amt", 500.0], ["created_at", "2018-06-27 04:42:38.535929"], ["updated_at", "2018-06-27 04:42:38.535929"]]
+  [1m[35m (3.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "fines" ("reason", "amt", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["reason", "No License"], ["amt", 1000.0], ["created_at", "2018-06-27 04:42:38.540409"], ["updated_at", "2018-06-27 04:42:38.540409"]]
+  [1m[35m (10.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "fines" ("reason", "amt", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["reason", "No RC"], ["amt", 1500.0], ["created_at", "2018-06-27 04:42:38.551499"], ["updated_at", "2018-06-27 04:42:38.551499"]]
+  [1m[35m (10.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "fines" ("reason", "amt", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["reason", "Drunk Driving"], ["amt", 500.0], ["created_at", "2018-06-27 04:42:38.562587"], ["updated_at", "2018-06-27 04:42:38.562587"]]
+  [1m[35m (10.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "types" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Two Wheelers"], ["created_at", "2018-06-27 04:42:38.582028"], ["updated_at", "2018-06-27 04:42:38.582028"]]
+  [1m[35m (12.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "types" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Cars"], ["created_at", "2018-06-27 04:42:38.595880"], ["updated_at", "2018-06-27 04:42:38.595880"]]
+  [1m[35m (10.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "types" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Heavy vehicles"], ["created_at", "2018-06-27 04:42:38.606949"], ["updated_at", "2018-06-27 04:42:38.606949"]]
+  [1m[35m (10.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mType Load (0.3ms)[0m  [1m[34mSELECT  "types".* FROM "types" WHERE "types"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "spots" ("name", "availability", "type_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "A1"], ["availability", "t"], ["type_id", 1], ["created_at", "2018-06-27 04:42:38.636584"], ["updated_at", "2018-06-27 04:42:38.636584"]]
+  [1m[35m (13.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mType Load (0.1ms)[0m  [1m[34mSELECT  "types".* FROM "types" WHERE "types"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "spots" ("name", "availability", "type_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "A2"], ["availability", "t"], ["type_id", 1], ["created_at", "2018-06-27 04:42:38.651874"], ["updated_at", "2018-06-27 04:42:38.651874"]]
+  [1m[35m (9.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mType Load (0.2ms)[0m  [1m[34mSELECT  "types".* FROM "types" WHERE "types"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "spots" ("name", "availability", "type_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "B1"], ["availability", "t"], ["type_id", 1], ["created_at", "2018-06-27 04:42:38.663214"], ["updated_at", "2018-06-27 04:42:38.663214"]]
+  [1m[35m (8.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mType Load (0.2ms)[0m  [1m[34mSELECT  "types".* FROM "types" WHERE "types"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "spots" ("name", "availability", "type_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "B2"], ["availability", "t"], ["type_id", 1], ["created_at", "2018-06-27 04:42:38.674288"], ["updated_at", "2018-06-27 04:42:38.674288"]]
+  [1m[35m (9.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mType Load (0.2ms)[0m  [1m[34mSELECT  "types".* FROM "types" WHERE "types"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "spots" ("name", "availability", "type_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "C1"], ["availability", "t"], ["type_id", 2], ["created_at", "2018-06-27 04:42:38.685371"], ["updated_at", "2018-06-27 04:42:38.685371"]]
+  [1m[35m (8.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mType Load (0.2ms)[0m  [1m[34mSELECT  "types".* FROM "types" WHERE "types"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "spots" ("name", "availability", "type_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "C2"], ["availability", "t"], ["type_id", 2], ["created_at", "2018-06-27 04:42:38.696510"], ["updated_at", "2018-06-27 04:42:38.696510"]]
+  [1m[35m (8.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "vehicles" ("file_name", "name", "model", "vnumber", "insurance_expiry_date", "pollution_expiry_date", "created_at", "updated_at", "type_id", "chassis_number", "engine_number", "year_of_registration", "fuel_type", "dealer_name") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14) RETURNING "id"[0m  [["file_name", "1.jpg"], ["name", "Honda Civic"], ["model", "Sedan"], ["vnumber", "XYZ0123456"], ["insurance_expiry_date", "2018-06-27 04:42:38.718517"], ["pollution_expiry_date", "2018-06-27 04:42:38.718533"], ["created_at", "2018-06-27 04:42:38.728724"], ["updated_at", "2018-06-27 04:42:38.728724"], ["type_id", 2], ["chassis_number", "MBLHA11ERA9H03384"], ["engine_number", "HA11EDA9H03528"], ["year_of_registration", 2011], ["fuel_type", "Petrol"], ["dealer_name", "Pothens"]]
+  [1m[35m (15.1ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-06-27 10:12:54 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Devise::SessionsController#new as HTML
+  Rendering /var/lib/gems/2.3.0/gems/devise-4.4.3/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /var/lib/gems/2.3.0/gems/devise-4.4.3/app/views/devise/shared/_links.html.erb (0.8ms)
+  Rendered /var/lib/gems/2.3.0/gems/devise-4.4.3/app/views/devise/sessions/new.html.erb within layouts/application (21.6ms)
+  Rendered layouts/_navbar_guest.html.erb (0.3ms)
+  Rendered layouts/_navbar.html.erb (1.1ms)
+Completed 200 OK in 410ms (Views: 394.0ms | ActiveRecord: 3.2ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2018-06-27 10:13:01 +0530
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"COXfeDX5Sm3aRfIf4+wUTsInMtk8T9WwkW1wFeFkjyXSq9FMR4E3lzrWlKp9ykKLdpHOyMTVFBpAxi3YskofBw==", "user"=>{"email"=>"admin@mp.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "admin@mp.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 4ms (ActiveRecord: 1.1ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"COXfeDX5Sm3aRfIf4+wUTsInMtk8T9WwkW1wFeFkjyXSq9FMR4E3lzrWlKp9ykKLdpHOyMTVFBpAxi3YskofBw==", "user"=>{"email"=>"admin@mp.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering /var/lib/gems/2.3.0/gems/devise-4.4.3/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /var/lib/gems/2.3.0/gems/devise-4.4.3/app/views/devise/shared/_links.html.erb (0.6ms)
+  Rendered /var/lib/gems/2.3.0/gems/devise-4.4.3/app/views/devise/sessions/new.html.erb within layouts/application (2.7ms)
+  Rendered layouts/_navbar_guest.html.erb (0.3ms)
+  Rendered layouts/_navbar.html.erb (0.9ms)
+Completed 200 OK in 130ms (Views: 35.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2018-06-27 10:13:12 +0530
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"bU+eG0Upptfhwihef3GBMKOtDN89xSLHAidxlmCmaBa3AZAvN1HbLQFRTuvhV9f1FxvwzsVf423TjCxbM4j4NA==", "user"=>{"email"=>"admin@mp.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "admin@mp.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.4ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"bU+eG0Upptfhwihef3GBMKOtDN89xSLHAidxlmCmaBa3AZAvN1HbLQFRTuvhV9f1FxvwzsVf423TjCxbM4j4NA==", "user"=>{"email"=>"admin@mp.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering /var/lib/gems/2.3.0/gems/devise-4.4.3/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /var/lib/gems/2.3.0/gems/devise-4.4.3/app/views/devise/shared/_links.html.erb (0.5ms)
+  Rendered /var/lib/gems/2.3.0/gems/devise-4.4.3/app/views/devise/sessions/new.html.erb within layouts/application (2.5ms)
+  Rendered layouts/_navbar_guest.html.erb (0.3ms)
+  Rendered layouts/_navbar.html.erb (0.9ms)
+Completed 200 OK in 135ms (Views: 41.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2018-06-27 10:13:28 +0530
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KKCb6owFQZzjOfLFk54wCG8ARSsmCjIfDFFXh3SNbk/y7pXe/n08ZgOqlHANuGbN27a5Ot6Q87Xd+gpKJ6P+bQ==", "user"=>{"email"=>"admin@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "admin@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = $1, "last_sign_in_at" = $2, "current_sign_in_ip" = $3, "last_sign_in_ip" = $4, "sign_in_count" = $5, "updated_at" = $6 WHERE "users"."id" = $7[0m  [["current_sign_in_at", "2018-06-27 04:43:29.060634"], ["last_sign_in_at", "2018-06-27 04:43:29.060634"], ["current_sign_in_ip", "127.0.0.1/32"], ["last_sign_in_ip", "127.0.0.1/32"], ["sign_in_count", 1], ["updated_at", "2018-06-27 04:43:29.061466"], ["id", 1]]
+  [1m[35m (18.0ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/vehicles/1
+Completed 302 Found in 136ms (ActiveRecord: 18.8ms)
+
+
+Started GET "/vehicles/1" for 127.0.0.1 at 2018-06-27 10:13:29 +0530
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from <class:VehiclesController> at /home/ram/Downloads/KMVD/app/controllers/vehicles_controller.rb:4)
+Processing by VehiclesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mVehicle Load (0.3ms)[0m  [1m[34mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering vehicles/show.html.erb within layouts/application
+  [1m[36mType Load (0.2ms)[0m  [1m[34mSELECT  "types".* FROM "types" WHERE "types"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mVehicleFine Load (0.3ms)[0m  [1m[34mSELECT "vehicle_fines".* FROM "vehicle_fines" WHERE "vehicle_fines"."vehicle_id" = $1[0m  [["vehicle_id", 1]]
+  [1m[36mSpot Load (0.3ms)[0m  [1m[34mSELECT "spots".* FROM "spots" WHERE "spots"."type_id" = 2[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "types".* FROM "types" WHERE "types"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "types".* FROM "types" WHERE "types"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered vehicles/show.html.erb within layouts/application (45.5ms)
+  Rendered layouts/_navbar_user.html.erb (0.5ms)
+  Rendered layouts/_navbar.html.erb (8.1ms)
+Completed 200 OK in 110ms (Views: 81.0ms | ActiveRecord: 11.7ms)
+
+
+Started GET "/vehicles" for 127.0.0.1 at 2018-06-27 10:13:31 +0530
+Processing by VehiclesController#index as HTML
+  Rendering vehicles/index.html.erb within layouts/application
+  [1m[36mVehicle Load (0.4ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles"[0m
+  Rendered vehicles/index.html.erb within layouts/application (9.0ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_navbar_user.html.erb (0.5ms)
+  Rendered layouts/_navbar.html.erb (2.2ms)
+Completed 200 OK in 46ms (Views: 43.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/vehicles/1/edit" for 127.0.0.1 at 2018-06-27 10:13:34 +0530
+Processing by VehiclesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mVehicle Load (0.3ms)[0m  [1m[34mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering vehicles/edit.html.erb within layouts/application
+  [1m[36mType Load (0.3ms)[0m  [1m[34mSELECT "types".* FROM "types"[0m
+  Rendered vehicles/_form.html.erb (67.8ms)
+  Rendered vehicles/edit.html.erb within layouts/application (69.4ms)
+  Rendered layouts/_navbar_user.html.erb (0.5ms)
+  Rendered layouts/_navbar.html.erb (1.0ms)
+Completed 200 OK in 119ms (Views: 102.4ms | ActiveRecord: 0.9ms)
+
+
+Started PATCH "/vehicles/1" for 127.0.0.1 at 2018-06-27 10:13:39 +0530
+Processing by VehiclesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ahyv4qxoZbfP4BhsSJ6+AWcx0cqh1FdgAZCghDrjlGTGsoG4C8hjffpcRSESQV0d4OfhQY3mLYGAriUQqa+jpg==", "vehicle"=>{"name"=>"Honda Civic", "model"=>"Sedan", "vnumber"=>"XYZ0123456", "type_id"=>"2", "insurance_expiry_date(1i)"=>"2018", "insurance_expiry_date(2i)"=>"6", "insurance_expiry_date(3i)"=>"27", "insurance_expiry_date(4i)"=>"04", "insurance_expiry_date(5i)"=>"42", "pollution_expiry_date(1i)"=>"2018", "pollution_expiry_date(2i)"=>"6", "pollution_expiry_date(3i)"=>"27", "pollution_expiry_date(4i)"=>"04", "pollution_expiry_date(5i)"=>"42", "chassis_number"=>"MBLHA11ERA9H03384", "engine_number"=>"HA11EDA9H03528", "year_of_registration"=>"2011", "fuel_type"=>"Petrol", "dealer_name"=>"Pothens", "class_of_vehicle"=>"Heavy"}, "commit"=>"Update Vehicle", "id"=>"1"}
+  [1m[36mVehicle Load (0.3ms)[0m  [1m[34mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Unpermitted parameters: chassis_number, engine_number, year_of_registration, fuel_type, dealer_name, class_of_vehicle
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mType Load (0.2ms)[0m  [1m[34mSELECT  "types".* FROM "types" WHERE "types"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "vehicles" SET "insurance_expiry_date" = $1, "pollution_expiry_date" = $2, "updated_at" = $3 WHERE "vehicles"."id" = $4[0m  [["insurance_expiry_date", "2018-06-27 04:42:00"], ["pollution_expiry_date", "2018-06-27 04:42:00"], ["updated_at", "2018-06-27 04:43:39.946388"], ["id", 1]]
+  [1m[35m (42.6ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/vehicles/1
+Completed 302 Found in 53ms (ActiveRecord: 43.7ms)
+
+
+Started GET "/vehicles/1" for 127.0.0.1 at 2018-06-27 10:13:39 +0530
+Processing by VehiclesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mVehicle Load (0.3ms)[0m  [1m[34mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering vehicles/show.html.erb within layouts/application
+  [1m[36mType Load (0.3ms)[0m  [1m[34mSELECT  "types".* FROM "types" WHERE "types"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mVehicleFine Load (0.2ms)[0m  [1m[34mSELECT "vehicle_fines".* FROM "vehicle_fines" WHERE "vehicle_fines"."vehicle_id" = $1[0m  [["vehicle_id", 1]]
+  [1m[36mSpot Load (0.3ms)[0m  [1m[34mSELECT "spots".* FROM "spots" WHERE "spots"."type_id" = 2[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "types".* FROM "types" WHERE "types"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "types".* FROM "types" WHERE "types"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered vehicles/show.html.erb within layouts/application (10.2ms)
+  Rendered layouts/_navbar_user.html.erb (0.5ms)
+  Rendered layouts/_navbar.html.erb (1.0ms)
+Completed 200 OK in 56ms (Views: 52.9ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/vehicles/1/edit" for 127.0.0.1 at 2018-06-27 10:14:54 +0530
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from <class:VehiclesController> at /home/ram/Downloads/KMVD/app/controllers/vehicles_controller.rb:4)
+Processing by VehiclesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mVehicle Load (0.2ms)[0m  [1m[34mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering vehicles/edit.html.erb within layouts/application
+  [1m[36mType Load (0.3ms)[0m  [1m[34mSELECT "types".* FROM "types"[0m
+  Rendered vehicles/_form.html.erb (21.9ms)
+  Rendered vehicles/edit.html.erb within layouts/application (23.2ms)
+  Rendered layouts/_navbar_user.html.erb (0.9ms)
+  Rendered layouts/_navbar.html.erb (1.5ms)
+Completed 200 OK in 91ms (Views: 60.8ms | ActiveRecord: 8.3ms)
+
+
+Started PATCH "/vehicles/1" for 127.0.0.1 at 2018-06-27 10:15:00 +0530
+Processing by VehiclesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KjqD3T6BfXmOZVEIK6Vs7FOfF6vDBqhhManHxXa0D82GlK2HmSF7s7vZDEVxeo/w1EknIO800oCwl0JR5fg4Dw==", "vehicle"=>{"name"=>"Honda Civic", "model"=>"Sedan", "vnumber"=>"XYZ0123456", "type_id"=>"2", "insurance_expiry_date(1i)"=>"2018", "insurance_expiry_date(2i)"=>"6", "insurance_expiry_date(3i)"=>"27", "insurance_expiry_date(4i)"=>"04", "insurance_expiry_date(5i)"=>"42", "pollution_expiry_date(1i)"=>"2018", "pollution_expiry_date(2i)"=>"6", "pollution_expiry_date(3i)"=>"27", "pollution_expiry_date(4i)"=>"04", "pollution_expiry_date(5i)"=>"42", "chassis_number"=>"MBLHA11ERA9H03384", "engine_number"=>"HA11EDA9H03528", "year_of_registration"=>"2011", "fuel_type"=>"Petrol", "dealer_name"=>"Pothens", "class_of_vehicle"=>"Seda"}, "commit"=>"Update Vehicle", "id"=>"1"}
+  [1m[36mVehicle Load (0.4ms)[0m  [1m[34mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mType Load (0.3ms)[0m  [1m[34mSELECT  "types".* FROM "types" WHERE "types"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "vehicles" SET "class_of_vehicle" = $1, "updated_at" = $2 WHERE "vehicles"."id" = $3[0m  [["class_of_vehicle", "Seda"], ["updated_at", "2018-06-27 04:45:00.566536"], ["id", 1]]
+  [1m[35m (19.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/vehicles/1
+Completed 302 Found in 30ms (ActiveRecord: 20.7ms)
+
+
+Started GET "/vehicles/1" for 127.0.0.1 at 2018-06-27 10:15:00 +0530
+Processing by VehiclesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mVehicle Load (0.2ms)[0m  [1m[34mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering vehicles/show.html.erb within layouts/application
+  [1m[36mType Load (0.3ms)[0m  [1m[34mSELECT  "types".* FROM "types" WHERE "types"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mVehicleFine Load (0.1ms)[0m  [1m[34mSELECT "vehicle_fines".* FROM "vehicle_fines" WHERE "vehicle_fines"."vehicle_id" = $1[0m  [["vehicle_id", 1]]
+  [1m[36mSpot Load (0.2ms)[0m  [1m[34mSELECT "spots".* FROM "spots" WHERE "spots"."type_id" = 2[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "types".* FROM "types" WHERE "types"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "types".* FROM "types" WHERE "types"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered vehicles/show.html.erb within layouts/application (31.4ms)
+  Rendered layouts/_navbar_user.html.erb (0.5ms)
+  Rendered layouts/_navbar.html.erb (1.1ms)
+Completed 200 OK in 74ms (Views: 67.2ms | ActiveRecord: 5.2ms)
+
+
+Started GET "/vehicles/1/edit" for 127.0.0.1 at 2018-06-27 10:15:04 +0530
+Processing by VehiclesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mVehicle Load (0.2ms)[0m  [1m[34mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering vehicles/edit.html.erb within layouts/application
+  [1m[36mType Load (0.3ms)[0m  [1m[34mSELECT "types".* FROM "types"[0m
+  Rendered vehicles/_form.html.erb (15.0ms)
+  Rendered vehicles/edit.html.erb within layouts/application (16.2ms)
+  Rendered layouts/_navbar_user.html.erb (0.4ms)
+  Rendered layouts/_navbar.html.erb (1.0ms)
+Completed 200 OK in 50ms (Views: 47.2ms | ActiveRecord: 0.9ms)
+
+
+Started PATCH "/vehicles/1" for 127.0.0.1 at 2018-06-27 10:15:08 +0530
+Processing by VehiclesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/JMG0nZMQ+txCpcDkdjy9g/KgeJILpFbu28H68DJxk1QPSiI0exFIUS2yk7LBxHqiByxaWQc67o6UYJ/U4Xxjw==", "vehicle"=>{"name"=>"Honda Civic", "model"=>"Sedan", "vnumber"=>"XYZ0123456", "type_id"=>"2", "insurance_expiry_date(1i)"=>"2018", "insurance_expiry_date(2i)"=>"6", "insurance_expiry_date(3i)"=>"27", "insurance_expiry_date(4i)"=>"04", "insurance_expiry_date(5i)"=>"42", "pollution_expiry_date(1i)"=>"2018", "pollution_expiry_date(2i)"=>"6", "pollution_expiry_date(3i)"=>"27", "pollution_expiry_date(4i)"=>"04", "pollution_expiry_date(5i)"=>"42", "chassis_number"=>"MBLHA11ERA9H03384", "engine_number"=>"HA11EDA9H03528", "year_of_registration"=>"2011", "fuel_type"=>"Petrol", "dealer_name"=>"Pothens", "class_of_vehicle"=>"Sedan"}, "commit"=>"Update Vehicle", "id"=>"1"}
+  [1m[36mVehicle Load (0.2ms)[0m  [1m[34mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mType Load (0.2ms)[0m  [1m[34mSELECT  "types".* FROM "types" WHERE "types"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "vehicles" SET "class_of_vehicle" = $1, "updated_at" = $2 WHERE "vehicles"."id" = $3[0m  [["class_of_vehicle", "Sedan"], ["updated_at", "2018-06-27 04:45:08.497937"], ["id", 1]]
+  [1m[35m (10.8ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/vehicles/1
+Completed 302 Found in 18ms (ActiveRecord: 12.0ms)
+
+
+Started GET "/vehicles/1" for 127.0.0.1 at 2018-06-27 10:15:08 +0530
+Processing by VehiclesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mVehicle Load (0.2ms)[0m  [1m[34mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering vehicles/show.html.erb within layouts/application
+  [1m[36mType Load (0.1ms)[0m  [1m[34mSELECT  "types".* FROM "types" WHERE "types"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mVehicleFine Load (0.2ms)[0m  [1m[34mSELECT "vehicle_fines".* FROM "vehicle_fines" WHERE "vehicle_fines"."vehicle_id" = $1[0m  [["vehicle_id", 1]]
+  [1m[36mSpot Load (0.2ms)[0m  [1m[34mSELECT "spots".* FROM "spots" WHERE "spots"."type_id" = 2[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "types".* FROM "types" WHERE "types"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "types".* FROM "types" WHERE "types"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered vehicles/show.html.erb within layouts/application (8.8ms)
+  Rendered layouts/_navbar_user.html.erb (0.4ms)
+  Rendered layouts/_navbar.html.erb (1.0ms)
+Completed 200 OK in 52ms (Views: 49.4ms | ActiveRecord: 1.0ms)
+
+

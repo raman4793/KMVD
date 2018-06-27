@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180624030026) do
+ActiveRecord::Schema.define(version: 20180627043330) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -80,16 +80,16 @@ ActiveRecord::Schema.define(version: 20180624030026) do
     t.string   "vnumber"
     t.datetime "insurance_expiry_date"
     t.datetime "pollution_expiry_date"
+    t.datetime "created_at",                            null: false
+    t.datetime "updated_at",                            null: false
+    t.integer  "type_id"
+    t.boolean  "parked",                default: false
     t.string   "chassis_number"
     t.string   "engine_number"
     t.integer  "year_of_registration"
     t.string   "fuel_type"
     t.string   "dealer_name"
     t.string   "class_of_vehicle"
-    t.datetime "created_at",                            null: false
-    t.datetime "updated_at",                            null: false
-    t.integer  "type_id"
-    t.boolean  "parked",                default: false
   end
 
   add_foreign_key "parkings", "spots"
