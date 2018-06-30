@@ -259,3 +259,1287 @@ Migrating to AddAvailabilityToSpots (20180627050153)
   [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
   [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(8049875993771153430)[0m
   [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Started GET "/" for 127.0.0.1 at 2018-06-30 14:09:38 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (41.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from <class:VehiclesController> at /home/ram/Downloads/KMVD/app/controllers/vehicles_controller.rb:4)
+Processing by VehiclesController#index as HTML
+  Rendering vehicles/index.html.erb within layouts/application
+  [1m[36mVehicle Load (14.3ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles"[0m
+  Rendered vehicles/index.html.erb within layouts/application (194.9ms)
+  Rendered layouts/_navbar_guest.html.erb (0.6ms)
+  Rendered layouts/_navbar.html.erb (22.1ms)
+Completed 200 OK in 3085ms (Views: 2892.9ms | ActiveRecord: 99.0ms)
+
+
+Started GET "/" for 192.168.1.6 at 2018-06-30 14:24:54 +0530
+Cannot render console from 192.168.1.6! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from <class:VehiclesController> at /home/ram/Downloads/KMVD/app/controllers/vehicles_controller.rb:4)
+Processing by VehiclesController#index as HTML
+  Rendering vehicles/index.html.erb within layouts/application
+  [1m[36mVehicle Load (0.3ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles"[0m
+  Rendered vehicles/index.html.erb within layouts/application (22.3ms)
+  Rendered layouts/_navbar_guest.html.erb (0.9ms)
+  Rendered layouts/_navbar.html.erb (3.9ms)
+Completed 200 OK in 367ms (Views: 358.8ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/vehicles/new" for 192.168.1.6 at 2018-06-30 14:27:06 +0530
+Cannot render console from 192.168.1.6! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by VehiclesController#new as HTML
+Completed 401 Unauthorized in 20ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 192.168.1.6 at 2018-06-30 14:27:06 +0530
+Cannot render console from 192.168.1.6! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering /var/lib/gems/2.3.0/gems/devise-4.4.3/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /var/lib/gems/2.3.0/gems/devise-4.4.3/app/views/devise/shared/_links.html.erb (0.9ms)
+  Rendered /var/lib/gems/2.3.0/gems/devise-4.4.3/app/views/devise/sessions/new.html.erb within layouts/application (37.4ms)
+  Rendered layouts/_navbar_guest.html.erb (0.3ms)
+  Rendered layouts/_navbar.html.erb (1.0ms)
+Completed 200 OK in 179ms (Views: 75.2ms | ActiveRecord: 91.8ms)
+
+
+Started GET "/users/sign_in" for 192.168.1.6 at 2018-06-30 14:27:25 +0530
+Cannot render console from 192.168.1.6! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering /var/lib/gems/2.3.0/gems/devise-4.4.3/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /var/lib/gems/2.3.0/gems/devise-4.4.3/app/views/devise/shared/_links.html.erb (0.6ms)
+  Rendered /var/lib/gems/2.3.0/gems/devise-4.4.3/app/views/devise/sessions/new.html.erb within layouts/application (2.6ms)
+  Rendered layouts/_navbar_guest.html.erb (0.3ms)
+  Rendered layouts/_navbar.html.erb (0.9ms)
+Completed 200 OK in 36ms (Views: 35.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 192.168.1.6 at 2018-06-30 14:27:41 +0530
+Cannot render console from 192.168.1.6! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Ktaqq4J2hIdm71BG+ub/gd8yRomOViwrfvn1AwqD88lUab/Ad/dYAHNP5XhGMjkygZpXMsFJeo9D28gMDMzLfA==", "user"=>{"email"=>"", "password"=>"[FILTERED]", "remember_me"=>"1"}, "commit"=>"Log in"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Ktaqq4J2hIdm71BG+ub/gd8yRomOViwrfvn1AwqD88lUab/Ad/dYAHNP5XhGMjkygZpXMsFJeo9D28gMDMzLfA==", "user"=>{"email"=>"", "password"=>"[FILTERED]", "remember_me"=>"1"}, "commit"=>"Log in"}
+  Rendering /var/lib/gems/2.3.0/gems/devise-4.4.3/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /var/lib/gems/2.3.0/gems/devise-4.4.3/app/views/devise/shared/_links.html.erb (1.0ms)
+  Rendered /var/lib/gems/2.3.0/gems/devise-4.4.3/app/views/devise/sessions/new.html.erb within layouts/application (4.4ms)
+  Rendered layouts/_navbar_guest.html.erb (0.3ms)
+  Rendered layouts/_navbar.html.erb (0.9ms)
+Completed 200 OK in 42ms (Views: 40.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 192.168.1.6 at 2018-06-30 14:27:42 +0530
+Cannot render console from 192.168.1.6! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering /var/lib/gems/2.3.0/gems/devise-4.4.3/app/views/devise/registrations/new.html.erb within layouts/application
+  Rendered /var/lib/gems/2.3.0/gems/devise-4.4.3/app/views/devise/shared/_links.html.erb (1.0ms)
+  Rendered /var/lib/gems/2.3.0/gems/devise-4.4.3/app/views/devise/registrations/new.html.erb within layouts/application (4.5ms)
+  Rendered layouts/_navbar_guest.html.erb (0.3ms)
+  Rendered layouts/_navbar.html.erb (1.0ms)
+Completed 200 OK in 58ms (Views: 57.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 192.168.1.6 at 2018-06-30 14:28:01 +0530
+Cannot render console from 192.168.1.6! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"aZ981GQeVYtCFhB9sOkMrqvM/uFxHmBMNBaNIEkC3H8XIGm/kZ+JDFe2pUMMPcod9WTvWj4BNugJNLAvT03kyg==", "user"=>{"email"=>"shaiju8055@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (22.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "shaiju8055@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (28.8ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "shaiju8055@gmail.com"], ["encrypted_password", "$2a$11$KgPdTm9P3.Hvafvy1N5rbe24RzGfEvw/Gc5UT2sItzrOh6ZE806EK"], ["created_at", "2018-06-30 08:58:01.375138"], ["updated_at", "2018-06-30 08:58:01.375138"]]
+  [1m[35m (15.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "users" SET "sign_in_count" = $1, "current_sign_in_at" = $2, "last_sign_in_at" = $3, "current_sign_in_ip" = $4, "last_sign_in_ip" = $5, "updated_at" = $6 WHERE "users"."id" = $7[0m  [["sign_in_count", 1], ["current_sign_in_at", "2018-06-30 08:58:01.421103"], ["last_sign_in_at", "2018-06-30 08:58:01.421103"], ["current_sign_in_ip", "192.168.1.6/32"], ["last_sign_in_ip", "192.168.1.6/32"], ["updated_at", "2018-06-30 08:58:01.422007"], ["id", 1]]
+  [1m[35m (7.0ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://192.168.1.3:3011/vehicles/new
+Completed 302 Found in 230ms (ActiveRecord: 74.0ms)
+
+
+Started GET "/vehicles/new" for 192.168.1.6 at 2018-06-30 14:28:01 +0530
+Cannot render console from 192.168.1.6! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by VehiclesController#new as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering vehicles/new.html.erb within layouts/application
+  [1m[36mType Load (1.0ms)[0m  [1m[34mSELECT "types".* FROM "types"[0m
+  Rendered vehicles/_form.html.erb (80.5ms)
+  Rendered vehicles/new.html.erb within layouts/application (88.5ms)
+  Rendered layouts/_navbar_user.html.erb (0.9ms)
+  Rendered layouts/_navbar.html.erb (14.1ms)
+Completed 200 OK in 169ms (Views: 135.1ms | ActiveRecord: 3.8ms)
+
+
+Started POST "/users/sign_in" for 192.168.1.6 at 2018-06-30 14:29:51 +0530
+Cannot render console from 192.168.1.6! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lxt8Gge1QKAQsThBOxZTSPcTZHNvyFzCuOoazlPe7KzppGlx8jScJwURjX+HwpX7qbt1yCDXCmaFyCfBVZHUGQ==", "user"=>{"email"=>"shaiju8055@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"1"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://192.168.1.3:3011/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 3ms (ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 192.168.1.6 at 2018-06-30 14:29:51 +0530
+Cannot render console from 192.168.1.6! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by VehiclesController#index as HTML
+  Rendering vehicles/index.html.erb within layouts/application
+  [1m[36mVehicle Load (0.6ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles"[0m
+  Rendered vehicles/index.html.erb within layouts/application (5.6ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_navbar_user.html.erb (0.5ms)
+  Rendered layouts/_navbar.html.erb (2.3ms)
+Completed 200 OK in 55ms (Views: 53.0ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/vehicles" for 192.168.1.6 at 2018-06-30 14:30:05 +0530
+Cannot render console from 192.168.1.6! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by VehiclesController#index as HTML
+  Rendering vehicles/index.html.erb within layouts/application
+  [1m[36mVehicle Load (0.3ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles"[0m
+  Rendered vehicles/index.html.erb within layouts/application (5.0ms)
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_navbar_user.html.erb (0.5ms)
+  Rendered layouts/_navbar.html.erb (2.8ms)
+Completed 200 OK in 45ms (Views: 42.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/vehicles/new" for 192.168.1.6 at 2018-06-30 14:30:22 +0530
+Cannot render console from 192.168.1.6! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by VehiclesController#new as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering vehicles/new.html.erb within layouts/application
+  [1m[36mType Load (0.4ms)[0m  [1m[34mSELECT "types".* FROM "types"[0m
+  Rendered vehicles/_form.html.erb (14.4ms)
+  Rendered vehicles/new.html.erb within layouts/application (16.0ms)
+  Rendered layouts/_navbar_user.html.erb (0.5ms)
+  Rendered layouts/_navbar.html.erb (1.1ms)
+Completed 200 OK in 55ms (Views: 52.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/types" for 192.168.1.6 at 2018-06-30 14:30:37 +0530
+Cannot render console from 192.168.1.6! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TypesController#index as HTML
+  Rendering types/index.html.erb within layouts/application
+  [1m[36mType Load (0.4ms)[0m  [1m[34mSELECT "types".* FROM "types"[0m
+  Rendered types/index.html.erb within layouts/application (3.3ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_navbar_user.html.erb (0.8ms)
+  Rendered layouts/_navbar.html.erb (3.2ms)
+Completed 200 OK in 56ms (Views: 54.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/fines" for 192.168.1.6 at 2018-06-30 14:30:39 +0530
+Cannot render console from 192.168.1.6! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from <class:FinesController> at /home/ram/Downloads/KMVD/app/controllers/fines_controller.rb:3)
+Processing by FinesController#index as HTML
+  Rendering fines/index.html.erb within layouts/application
+  [1m[36mFine Load (16.6ms)[0m  [1m[34mSELECT "fines".* FROM "fines"[0m
+  Rendered fines/index.html.erb within layouts/application (22.7ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_navbar_user.html.erb (0.5ms)
+  Rendered layouts/_navbar.html.erb (2.2ms)
+Completed 200 OK in 74ms (Views: 42.3ms | ActiveRecord: 19.0ms)
+
+
+Started GET "/vehicles" for 192.168.1.6 at 2018-06-30 14:30:41 +0530
+Cannot render console from 192.168.1.6! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by VehiclesController#index as HTML
+  Rendering vehicles/index.html.erb within layouts/application
+  [1m[36mVehicle Load (0.4ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles"[0m
+  Rendered vehicles/index.html.erb within layouts/application (4.9ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_navbar_user.html.erb (0.4ms)
+  Rendered layouts/_navbar.html.erb (1.9ms)
+Completed 200 OK in 38ms (Views: 36.0ms | ActiveRecord: 0.7ms)
+
+
+Started DELETE "/users/sign_out" for 192.168.1.6 at 2018-06-30 14:30:42 +0530
+Cannot render console from 192.168.1.6! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"pXGORYUnLmQDOng1neonfqTOmfhMotLLjZS0/QAP/33bzpsucKby4xaazQshPuHN+maIQwO9hG+wtonyBkDHyA=="}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://192.168.1.3:3011/
+Completed 302 Found in 33ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 192.168.1.6 at 2018-06-30 14:30:42 +0530
+Cannot render console from 192.168.1.6! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by VehiclesController#index as HTML
+  Rendering vehicles/index.html.erb within layouts/application
+  [1m[36mVehicle Load (0.5ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles"[0m
+  Rendered vehicles/index.html.erb within layouts/application (4.2ms)
+  Rendered layouts/_navbar_guest.html.erb (0.3ms)
+  Rendered layouts/_navbar.html.erb (1.0ms)
+Completed 200 OK in 44ms (Views: 43.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/vehicles/new" for 192.168.1.6 at 2018-06-30 14:31:05 +0530
+Cannot render console from 192.168.1.6! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by VehiclesController#new as HTML
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 192.168.1.6 at 2018-06-30 14:31:05 +0530
+Cannot render console from 192.168.1.6! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering /var/lib/gems/2.3.0/gems/devise-4.4.3/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /var/lib/gems/2.3.0/gems/devise-4.4.3/app/views/devise/shared/_links.html.erb (1.0ms)
+  Rendered /var/lib/gems/2.3.0/gems/devise-4.4.3/app/views/devise/sessions/new.html.erb within layouts/application (4.4ms)
+  Rendered layouts/_navbar_guest.html.erb (0.3ms)
+  Rendered layouts/_navbar.html.erb (1.0ms)
+Completed 200 OK in 43ms (Views: 42.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 192.168.1.6 at 2018-06-30 14:31:08 +0530
+Cannot render console from 192.168.1.6! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ZwSk0BR3RZycbN321MztXLJHyGwvKAgJCTEEbEwHxai1+5qpW5SEwqL2UZ7IvuYxSbKyFYa8pNKDqTXOFYhEAg==", "user"=>{"email"=>"shaiju8055@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "shaiju8055@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = $1, "sign_in_count" = $2, "updated_at" = $3 WHERE "users"."id" = $4[0m  [["current_sign_in_at", "2018-06-30 09:01:08.258604"], ["sign_in_count", 2], ["updated_at", "2018-06-30 09:01:08.259911"], ["id", 1]]
+  [1m[35m (22.0ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://192.168.1.3:3011/vehicles/new
+Completed 302 Found in 147ms (ActiveRecord: 23.4ms)
+
+
+Started GET "/vehicles/new" for 192.168.1.6 at 2018-06-30 14:31:08 +0530
+Cannot render console from 192.168.1.6! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by VehiclesController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering vehicles/new.html.erb within layouts/application
+  [1m[36mType Load (0.4ms)[0m  [1m[34mSELECT "types".* FROM "types"[0m
+  Rendered vehicles/_form.html.erb (14.2ms)
+  Rendered vehicles/new.html.erb within layouts/application (15.3ms)
+  Rendered layouts/_navbar_user.html.erb (0.5ms)
+  Rendered layouts/_navbar.html.erb (1.2ms)
+Completed 200 OK in 51ms (Views: 48.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/parkings" for 192.168.1.6 at 2018-06-30 14:31:12 +0530
+Cannot render console from 192.168.1.6! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ParkingsController#index as HTML
+  Rendering parkings/index.html.erb within layouts/application
+  [1m[36mParking Load (25.9ms)[0m  [1m[34mSELECT "parkings".* FROM "parkings"[0m
+  Rendered parkings/index.html.erb within layouts/application (32.4ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_navbar_user.html.erb (0.5ms)
+  Rendered layouts/_navbar.html.erb (2.2ms)
+Completed 200 OK in 91ms (Views: 42.7ms | ActiveRecord: 28.5ms)
+
+
+Started GET "/parkings/new" for 192.168.1.6 at 2018-06-30 14:31:17 +0530
+Cannot render console from 192.168.1.6! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ParkingsController#new as HTML
+  Rendering parkings/new.html.erb within layouts/application
+  [1m[36mSpot Load (4.4ms)[0m  [1m[34mSELECT "spots".* FROM "spots"[0m
+  [1m[36mVehicle Load (0.5ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles"[0m
+  Rendered parkings/_form.html.erb (23.2ms)
+  Rendered parkings/new.html.erb within layouts/application (35.6ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_navbar_user.html.erb (0.5ms)
+  Rendered layouts/_navbar.html.erb (2.1ms)
+Completed 200 OK in 96ms (Views: 68.6ms | ActiveRecord: 7.7ms)
+
+
+Started GET "/vehicles" for 192.168.1.6 at 2018-06-30 14:31:21 +0530
+Cannot render console from 192.168.1.6! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by VehiclesController#index as HTML
+  Rendering vehicles/index.html.erb within layouts/application
+  [1m[36mVehicle Load (0.5ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles"[0m
+  Rendered vehicles/index.html.erb within layouts/application (4.2ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_navbar_user.html.erb (0.4ms)
+  Rendered layouts/_navbar.html.erb (2.0ms)
+Completed 200 OK in 37ms (Views: 35.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/vehicles/new" for 192.168.1.6 at 2018-06-30 14:31:23 +0530
+Cannot render console from 192.168.1.6! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by VehiclesController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering vehicles/new.html.erb within layouts/application
+  [1m[36mType Load (0.4ms)[0m  [1m[34mSELECT "types".* FROM "types"[0m
+  Rendered vehicles/_form.html.erb (13.6ms)
+  Rendered vehicles/new.html.erb within layouts/application (14.6ms)
+  Rendered layouts/_navbar_user.html.erb (0.4ms)
+  Rendered layouts/_navbar.html.erb (1.0ms)
+Completed 200 OK in 55ms (Views: 52.5ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/vehicles" for 192.168.1.6 at 2018-06-30 14:32:32 +0530
+Cannot render console from 192.168.1.6! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by VehiclesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"veoL1R779mg69d19C5AJq7C4neubrZKBLvLCLsPk+p96qz3nm4AXgx/QOqmc78asBveWaEdcVVt/F54ETFvbig==", "vehicle"=>{"file_name"=>#<ActionDispatch::Http::UploadedFile:0x007fc55aba7be8 @tempfile=#<Tempfile:/tmp/RackMultipart20180630-5271-19yn09j.gif>, @original_filename="eecitmw.gif", @content_type="image/gif", @headers="Content-Disposition: form-data; name=\"vehicle[file_name]\"; filename=\"eecitmw.gif\"\r\nContent-Type: image/gif\r\n">, "name"=>"GIXXER", "model"=>"2015", "vnumber"=>"AG _o 1 83G", "type_id"=>"", "insurance_expiry_date(1i)"=>"2018", "insurance_expiry_date(2i)"=>"6", "insurance_expiry_date(3i)"=>"29", "insurance_expiry_date(4i)"=>"09", "insurance_expiry_date(5i)"=>"01", "pollution_expiry_date(1i)"=>"2018", "pollution_expiry_date(2i)"=>"6", "pollution_expiry_date(3i)"=>"31", "pollution_expiry_date(4i)"=>"09", "pollution_expiry_date(5i)"=>"01", "chassis_number"=>"5456456454", "engine_number"=>"54484864", "year_of_registration"=>"2015", "fuel_type"=>"petrol", "dealer_name"=>"sid", "class_of_vehicle"=>"lmv"}, "commit"=>"Create Vehicle"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  Rendering vehicles/new.html.erb within layouts/application
+  [1m[36mType Load (0.3ms)[0m  [1m[34mSELECT "types".* FROM "types"[0m
+  Rendered vehicles/_form.html.erb (17.1ms)
+  Rendered vehicles/new.html.erb within layouts/application (18.5ms)
+  Rendered layouts/_navbar_user.html.erb (0.5ms)
+  Rendered layouts/_navbar.html.erb (1.2ms)
+Completed 200 OK in 86ms (Views: 53.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/types" for 192.168.1.6 at 2018-06-30 14:33:13 +0530
+Cannot render console from 192.168.1.6! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TypesController#index as HTML
+  Rendering types/index.html.erb within layouts/application
+  [1m[36mType Load (0.3ms)[0m  [1m[34mSELECT "types".* FROM "types"[0m
+  Rendered types/index.html.erb within layouts/application (2.9ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_navbar_user.html.erb (0.5ms)
+  Rendered layouts/_navbar.html.erb (2.3ms)
+Completed 200 OK in 39ms (Views: 37.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/types/new" for 192.168.1.6 at 2018-06-30 14:33:17 +0530
+Cannot render console from 192.168.1.6! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TypesController#new as HTML
+  Rendering types/new.html.erb within layouts/application
+  Rendered types/_form.html.erb (3.4ms)
+  Rendered types/new.html.erb within layouts/application (21.9ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_navbar_user.html.erb (0.4ms)
+  Rendered layouts/_navbar.html.erb (2.1ms)
+Completed 200 OK in 92ms (Views: 60.8ms | ActiveRecord: 1.7ms)
+
+
+Started POST "/types" for 192.168.1.6 at 2018-06-30 14:33:28 +0530
+Cannot render console from 192.168.1.6! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TypesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"iLamkiZKK0kiLkztmUhmAr/XizuM+2ECeGDi9A+n515P95CgozHKogcLqzkON6kFCZiAuFAKptgphb7egBjGSw==", "type"=>{"name"=>"bike"}, "commit"=>"Create Type"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (19.5ms)[0m  [1m[32mINSERT INTO "types" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "bike"], ["created_at", "2018-06-30 09:03:28.608908"], ["updated_at", "2018-06-30 09:03:28.608908"]]
+  [1m[35m (15.7ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://192.168.1.3:3011/types/1
+Completed 302 Found in 37ms (ActiveRecord: 35.2ms)
+
+
+Started GET "/types/1" for 192.168.1.6 at 2018-06-30 14:33:28 +0530
+Cannot render console from 192.168.1.6! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TypesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mType Load (0.2ms)[0m  [1m[34mSELECT  "types".* FROM "types" WHERE "types"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering types/show.html.erb within layouts/application
+  Rendered types/show.html.erb within layouts/application (1.9ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_navbar_user.html.erb (0.5ms)
+  Rendered layouts/_navbar.html.erb (2.1ms)
+Completed 200 OK in 57ms (Views: 41.1ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/types" for 192.168.1.6 at 2018-06-30 14:33:45 +0530
+Cannot render console from 192.168.1.6! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TypesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"iLamkiZKK0kiLkztmUhmAr/XizuM+2ECeGDi9A+n515P95CgozHKogcLqzkON6kFCZiAuFAKptgphb7egBjGSw==", "type"=>{"name"=>"car"}, "commit"=>"Create Type"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "types" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "car"], ["created_at", "2018-06-30 09:03:45.014828"], ["updated_at", "2018-06-30 09:03:45.014828"]]
+  [1m[35m (17.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://192.168.1.3:3011/types/2
+Completed 302 Found in 20ms (ActiveRecord: 17.7ms)
+
+
+Started GET "/types/2" for 192.168.1.6 at 2018-06-30 14:33:45 +0530
+Cannot render console from 192.168.1.6! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TypesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mType Load (0.2ms)[0m  [1m[34mSELECT  "types".* FROM "types" WHERE "types"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering types/show.html.erb within layouts/application
+  Rendered types/show.html.erb within layouts/application (1.8ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_navbar_user.html.erb (0.4ms)
+  Rendered layouts/_navbar.html.erb (2.1ms)
+Completed 200 OK in 39ms (Views: 36.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/types" for 192.168.1.6 at 2018-06-30 14:33:48 +0530
+Cannot render console from 192.168.1.6! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TypesController#index as HTML
+  Rendering types/index.html.erb within layouts/application
+  [1m[36mType Load (0.2ms)[0m  [1m[34mSELECT "types".* FROM "types"[0m
+  Rendered types/index.html.erb within layouts/application (4.3ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_navbar_user.html.erb (0.5ms)
+  Rendered layouts/_navbar.html.erb (2.0ms)
+Completed 200 OK in 48ms (Views: 47.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/vehicles" for 192.168.1.6 at 2018-06-30 14:34:04 +0530
+Cannot render console from 192.168.1.6! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by VehiclesController#index as HTML
+  Rendering vehicles/index.html.erb within layouts/application
+  [1m[36mVehicle Load (0.3ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles"[0m
+  Rendered vehicles/index.html.erb within layouts/application (4.9ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_navbar_user.html.erb (0.5ms)
+  Rendered layouts/_navbar.html.erb (2.2ms)
+Completed 200 OK in 44ms (Views: 42.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/vehicles/new" for 192.168.1.6 at 2018-06-30 14:34:08 +0530
+Cannot render console from 192.168.1.6! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by VehiclesController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering vehicles/new.html.erb within layouts/application
+  [1m[36mType Load (0.2ms)[0m  [1m[34mSELECT "types".* FROM "types"[0m
+  Rendered vehicles/_form.html.erb (14.9ms)
+  Rendered vehicles/new.html.erb within layouts/application (16.2ms)
+  Rendered layouts/_navbar_user.html.erb (0.4ms)
+  Rendered layouts/_navbar.html.erb (1.0ms)
+Completed 200 OK in 52ms (Views: 49.5ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/vehicles" for 192.168.1.6 at 2018-06-30 14:35:20 +0530
+Cannot render console from 192.168.1.6! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by VehiclesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5zGqjWZnk+C/jm8IL7VLQdJXCu7rXDbsNm0txzwFtawgcJy/4xxyC5qriNy4yoRGZBgBbTet8TZniHHts7qUuQ==", "vehicle"=>{"file_name"=>#<ActionDispatch::Http::UploadedFile:0x007fc55122e9f8 @tempfile=#<Tempfile:/tmp/RackMultipart20180630-5271-17lxirs.gif>, @original_filename="eecitmw.gif", @content_type="image/gif", @headers="Content-Disposition: form-data; name=\"vehicle[file_name]\"; filename=\"eecitmw.gif\"\r\nContent-Type: image/gif\r\n">, "name"=>"GIXXER", "model"=>"2015", "vnumber"=>"AG _o 1 83G", "type_id"=>"1", "insurance_expiry_date(1i)"=>"2018", "insurance_expiry_date(2i)"=>"6", "insurance_expiry_date(3i)"=>"29", "insurance_expiry_date(4i)"=>"10", "insurance_expiry_date(5i)"=>"04", "pollution_expiry_date(1i)"=>"2018", "pollution_expiry_date(2i)"=>"6", "pollution_expiry_date(3i)"=>"29", "pollution_expiry_date(4i)"=>"09", "pollution_expiry_date(5i)"=>"04", "chassis_number"=>"5456456454", "engine_number"=>"22336658", "year_of_registration"=>"2015", "fuel_type"=>"petrol", "dealer_name"=>"zusuki", "class_of_vehicle"=>"lmv"}, "commit"=>"Create Vehicle"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mType Load (0.2ms)[0m  [1m[34mSELECT  "types".* FROM "types" WHERE "types"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "vehicles" ("file_name", "name", "model", "vnumber", "created_at", "updated_at", "type_id", "chassis_number", "engine_number", "year_of_registration", "fuel_type", "dealer_name", "class_of_vehicle", "insurance_expiry_date", "pollution_expiry_date") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15) RETURNING "id"[0m  [["file_name", "eecitmw.gif"], ["name", "GIXXER"], ["model", "2015"], ["vnumber", "AG _o 1 83G"], ["created_at", "2018-06-30 09:05:20.511370"], ["updated_at", "2018-06-30 09:05:20.511370"], ["type_id", 1], ["chassis_number", "5456456454"], ["engine_number", "22336658"], ["year_of_registration", 2015], ["fuel_type", "petrol"], ["dealer_name", "zusuki"], ["class_of_vehicle", "lmv"], ["insurance_expiry_date", "2018-06-29 10:04:00"], ["pollution_expiry_date", "2018-06-29 09:04:00"]]
+  [1m[35m (19.6ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://192.168.1.3:3011/vehicles/1
+Completed 302 Found in 48ms (ActiveRecord: 21.5ms)
+
+
+Started GET "/vehicles/1" for 192.168.1.6 at 2018-06-30 14:35:20 +0530
+Cannot render console from 192.168.1.6! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by VehiclesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mVehicle Load (0.2ms)[0m  [1m[34mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering vehicles/show.html.erb within layouts/application
+  [1m[36mType Load (0.3ms)[0m  [1m[34mSELECT  "types".* FROM "types" WHERE "types"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mVehicleFine Load (19.0ms)[0m  [1m[34mSELECT "vehicle_fines".* FROM "vehicle_fines" WHERE "vehicle_fines"."vehicle_id" = $1[0m  [["vehicle_id", 1]]
+  [1m[36mSpot Load (0.5ms)[0m  [1m[34mSELECT "spots".* FROM "spots" WHERE "spots"."type_id" = 1[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered vehicles/show.html.erb within layouts/application (56.4ms)
+  Rendered layouts/_navbar_user.html.erb (0.4ms)
+  Rendered layouts/_navbar.html.erb (1.0ms)
+Completed 200 OK in 108ms (Views: 74.0ms | ActiveRecord: 21.3ms)
+
+
+Started GET "/fines" for 192.168.1.6 at 2018-06-30 14:36:04 +0530
+Cannot render console from 192.168.1.6! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by FinesController#index as HTML
+  Rendering fines/index.html.erb within layouts/application
+  [1m[36mFine Load (0.5ms)[0m  [1m[34mSELECT "fines".* FROM "fines"[0m
+  Rendered fines/index.html.erb within layouts/application (3.3ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_navbar_user.html.erb (0.5ms)
+  Rendered layouts/_navbar.html.erb (2.0ms)
+Completed 200 OK in 38ms (Views: 37.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/fines/new" for 192.168.1.6 at 2018-06-30 14:36:07 +0530
+Cannot render console from 192.168.1.6! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by FinesController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering fines/new.html.erb within layouts/application
+  Rendered fines/_form.html.erb (5.3ms)
+  Rendered fines/new.html.erb within layouts/application (19.0ms)
+  Rendered layouts/_navbar_user.html.erb (0.4ms)
+  Rendered layouts/_navbar.html.erb (1.0ms)
+Completed 200 OK in 83ms (Views: 58.5ms | ActiveRecord: 2.7ms)
+
+
+Started POST "/fines" for 192.168.1.6 at 2018-06-30 14:36:15 +0530
+Cannot render console from 192.168.1.6! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by FinesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"J9rJjn5NUr9gEZrcaWN/DZsPPzvmEuU7cKdNScKLWATgm/+8+zazVEU0fQj+HLAKLUA0uDrjIuEhQhFjTTR5EQ==", "fine"=>{"reason"=>"pollution", "amt"=>"200"}, "commit"=>"Create Fine"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (15.0ms)[0m  [1m[32mINSERT INTO "fines" ("reason", "amt", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["reason", "pollution"], ["amt", 200.0], ["created_at", "2018-06-30 09:06:15.645773"], ["updated_at", "2018-06-30 09:06:15.645773"]]
+  [1m[35m (18.3ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://192.168.1.3:3011/fines/1
+Completed 302 Found in 37ms (ActiveRecord: 33.8ms)
+
+
+Started GET "/fines/1" for 192.168.1.6 at 2018-06-30 14:36:15 +0530
+Cannot render console from 192.168.1.6! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by FinesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mFine Load (0.3ms)[0m  [1m[34mSELECT  "fines".* FROM "fines" WHERE "fines"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering fines/show.html.erb within layouts/application
+  Rendered fines/show.html.erb within layouts/application (1.9ms)
+  Rendered layouts/_navbar_user.html.erb (0.5ms)
+  Rendered layouts/_navbar.html.erb (1.0ms)
+Completed 200 OK in 47ms (Views: 43.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/fines" for 192.168.1.6 at 2018-06-30 14:36:19 +0530
+Cannot render console from 192.168.1.6! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by FinesController#index as HTML
+  Rendering fines/index.html.erb within layouts/application
+  [1m[36mFine Load (0.5ms)[0m  [1m[34mSELECT "fines".* FROM "fines"[0m
+  Rendered fines/index.html.erb within layouts/application (4.6ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_navbar_user.html.erb (0.5ms)
+  Rendered layouts/_navbar.html.erb (2.2ms)
+Completed 200 OK in 44ms (Views: 42.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/fines/new" for 192.168.1.6 at 2018-06-30 14:36:21 +0530
+Cannot render console from 192.168.1.6! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by FinesController#new as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering fines/new.html.erb within layouts/application
+  Rendered fines/_form.html.erb (3.6ms)
+  Rendered fines/new.html.erb within layouts/application (5.2ms)
+  Rendered layouts/_navbar_user.html.erb (0.4ms)
+  Rendered layouts/_navbar.html.erb (1.0ms)
+Completed 200 OK in 42ms (Views: 39.5ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/fines" for 192.168.1.6 at 2018-06-30 14:36:30 +0530
+Cannot render console from 192.168.1.6! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by FinesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2t7oPLtlAlHg455+qFSVIQNbNDJfRY/CSMTjxhCKiB8dn94OPh7jusXGeao/K1omtRQ/sYO0SBgZIb/snzWpCg==", "fine"=>{"reason"=>"tax", "amt"=>"1500"}, "commit"=>"Create Fine"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "fines" ("reason", "amt", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["reason", "tax"], ["amt", 1500.0], ["created_at", "2018-06-30 09:06:30.564317"], ["updated_at", "2018-06-30 09:06:30.564317"]]
+  [1m[35m (27.5ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://192.168.1.3:3011/fines/2
+Completed 302 Found in 31ms (ActiveRecord: 28.3ms)
+
+
+Started GET "/fines/2" for 192.168.1.6 at 2018-06-30 14:36:30 +0530
+Cannot render console from 192.168.1.6! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by FinesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mFine Load (0.3ms)[0m  [1m[34mSELECT  "fines".* FROM "fines" WHERE "fines"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering fines/show.html.erb within layouts/application
+  Rendered fines/show.html.erb within layouts/application (1.9ms)
+  Rendered layouts/_navbar_user.html.erb (0.4ms)
+  Rendered layouts/_navbar.html.erb (1.0ms)
+Completed 200 OK in 41ms (Views: 37.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/fines" for 192.168.1.6 at 2018-06-30 14:36:32 +0530
+Cannot render console from 192.168.1.6! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by FinesController#index as HTML
+  Rendering fines/index.html.erb within layouts/application
+  [1m[36mFine Load (0.3ms)[0m  [1m[34mSELECT "fines".* FROM "fines"[0m
+  Rendered fines/index.html.erb within layouts/application (5.0ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_navbar_user.html.erb (0.4ms)
+  Rendered layouts/_navbar.html.erb (2.1ms)
+Completed 200 OK in 40ms (Views: 38.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/fines/new" for 192.168.1.6 at 2018-06-30 14:36:34 +0530
+Cannot render console from 192.168.1.6! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by FinesController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering fines/new.html.erb within layouts/application
+  Rendered fines/_form.html.erb (4.5ms)
+  Rendered fines/new.html.erb within layouts/application (5.9ms)
+  Rendered layouts/_navbar_user.html.erb (0.4ms)
+  Rendered layouts/_navbar.html.erb (1.1ms)
+Completed 200 OK in 44ms (Views: 41.4ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/fines" for 192.168.1.6 at 2018-06-30 14:36:40 +0530
+Cannot render console from 192.168.1.6! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by FinesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8cNlaEalTbj/qKT0wjzTI/LSPGZMQDKtb11JzcUvz0c2glNaw96sU9qNQyBVQxwkRJ035ZCx9Xc+uBXnSpDuUg==", "fine"=>{"reason"=>"", "amt"=>""}, "commit"=>"Create Fine"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "fines" ("reason", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["reason", ""], ["created_at", "2018-06-30 09:06:40.135216"], ["updated_at", "2018-06-30 09:06:40.135216"]]
+  [1m[35m (20.8ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://192.168.1.3:3011/fines/3
+Completed 302 Found in 25ms (ActiveRecord: 21.8ms)
+
+
+Started GET "/fines/3" for 192.168.1.6 at 2018-06-30 14:36:40 +0530
+Cannot render console from 192.168.1.6! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by FinesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mFine Load (0.2ms)[0m  [1m[34mSELECT  "fines".* FROM "fines" WHERE "fines"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering fines/show.html.erb within layouts/application
+  Rendered fines/show.html.erb within layouts/application (1.9ms)
+  Rendered layouts/_navbar_user.html.erb (0.4ms)
+  Rendered layouts/_navbar.html.erb (1.0ms)
+Completed 200 OK in 48ms (Views: 45.2ms | ActiveRecord: 0.7ms)
+
+
+Started DELETE "/fines/3" for 192.168.1.6 at 2018-06-30 14:36:45 +0530
+Cannot render console from 192.168.1.6! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by FinesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"kA3tthPt8wSAV9GrXI38ARH/OToBqrO7B5QnmX49ioBXTNuElpYS76VyNn/L8jMGp7Ayud1bdGFWcXuz8YKrlQ==", "id"=>"3"}
+  [1m[36mFine Load (0.3ms)[0m  [1m[34mSELECT  "fines".* FROM "fines" WHERE "fines"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[31mDELETE FROM "fines" WHERE "fines"."id" = $1[0m  [["id", 3]]
+  [1m[35m (31.9ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://192.168.1.3:3011/fines
+Completed 302 Found in 36ms (ActiveRecord: 33.2ms)
+
+
+Started GET "/fines" for 192.168.1.6 at 2018-06-30 14:36:45 +0530
+Cannot render console from 192.168.1.6! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by FinesController#index as HTML
+  Rendering fines/index.html.erb within layouts/application
+  [1m[36mFine Load (0.3ms)[0m  [1m[34mSELECT "fines".* FROM "fines"[0m
+  Rendered fines/index.html.erb within layouts/application (5.1ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_navbar_user.html.erb (0.5ms)
+  Rendered layouts/_navbar.html.erb (2.1ms)
+Completed 200 OK in 42ms (Views: 40.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/fines/new" for 192.168.1.6 at 2018-06-30 14:36:48 +0530
+Cannot render console from 192.168.1.6! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by FinesController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering fines/new.html.erb within layouts/application
+  Rendered fines/_form.html.erb (4.7ms)
+  Rendered fines/new.html.erb within layouts/application (6.1ms)
+  Rendered layouts/_navbar_user.html.erb (0.4ms)
+  Rendered layouts/_navbar.html.erb (1.0ms)
+Completed 200 OK in 42ms (Views: 40.0ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/fines" for 192.168.1.6 at 2018-06-30 14:37:11 +0530
+Cannot render console from 192.168.1.6! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by FinesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5mJ3pwnPFW/FKaJdtLGBsSftWx3Ld29hDf9qO0u/acYhI0GVjLT0hOAMRYkjzk62kaJQnheGqLtcGjYRxABI0w==", "fine"=>{"reason"=>"inshurance", "amt"=>"2000"}, "commit"=>"Create Fine"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "fines" ("reason", "amt", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["reason", "inshurance"], ["amt", 2000.0], ["created_at", "2018-06-30 09:07:11.570783"], ["updated_at", "2018-06-30 09:07:11.570783"]]
+  [1m[35m (19.6ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://192.168.1.3:3011/fines/4
+Completed 302 Found in 24ms (ActiveRecord: 20.4ms)
+
+
+Started GET "/fines/4" for 192.168.1.6 at 2018-06-30 14:37:11 +0530
+Cannot render console from 192.168.1.6! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by FinesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mFine Load (0.3ms)[0m  [1m[34mSELECT  "fines".* FROM "fines" WHERE "fines"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering fines/show.html.erb within layouts/application
+  Rendered fines/show.html.erb within layouts/application (1.9ms)
+  Rendered layouts/_navbar_user.html.erb (0.4ms)
+  Rendered layouts/_navbar.html.erb (1.0ms)
+Completed 200 OK in 41ms (Views: 38.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/parkings" for 192.168.1.6 at 2018-06-30 14:37:16 +0530
+Cannot render console from 192.168.1.6! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ParkingsController#index as HTML
+  Rendering parkings/index.html.erb within layouts/application
+  [1m[36mParking Load (0.6ms)[0m  [1m[34mSELECT "parkings".* FROM "parkings"[0m
+  Rendered parkings/index.html.erb within layouts/application (3.9ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_navbar_user.html.erb (0.5ms)
+  Rendered layouts/_navbar.html.erb (2.1ms)
+Completed 200 OK in 47ms (Views: 45.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/parkings/new" for 192.168.1.6 at 2018-06-30 14:37:18 +0530
+Cannot render console from 192.168.1.6! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ParkingsController#new as HTML
+  Rendering parkings/new.html.erb within layouts/application
+  [1m[36mSpot Load (0.5ms)[0m  [1m[34mSELECT "spots".* FROM "spots"[0m
+  [1m[36mVehicle Load (0.2ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles"[0m
+  Rendered parkings/_form.html.erb (4.8ms)
+  Rendered parkings/new.html.erb within layouts/application (5.8ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_navbar_user.html.erb (0.5ms)
+  Rendered layouts/_navbar.html.erb (2.0ms)
+Completed 200 OK in 41ms (Views: 39.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/spots" for 192.168.1.6 at 2018-06-30 14:37:29 +0530
+Cannot render console from 192.168.1.6! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SpotsController#index as HTML
+  Rendering spots/index.html.erb within layouts/application
+  [1m[36mSpot Load (0.3ms)[0m  [1m[34mSELECT "spots".* FROM "spots"[0m
+  Rendered spots/index.html.erb within layouts/application (4.2ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_navbar_user.html.erb (0.4ms)
+  Rendered layouts/_navbar.html.erb (2.0ms)
+Completed 200 OK in 61ms (Views: 49.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/spots/new" for 192.168.1.6 at 2018-06-30 14:37:32 +0530
+Cannot render console from 192.168.1.6! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SpotsController#new as HTML
+  Rendering spots/new.html.erb within layouts/application
+  [1m[36mType Load (0.4ms)[0m  [1m[34mSELECT "types".* FROM "types"[0m
+  Rendered spots/_form.html.erb (21.3ms)
+  Rendered spots/new.html.erb within layouts/application (41.0ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_navbar_user.html.erb (0.5ms)
+  Rendered layouts/_navbar.html.erb (2.2ms)
+Completed 200 OK in 105ms (Views: 77.6ms | ActiveRecord: 2.4ms)
+
+
+Started POST "/spots" for 192.168.1.6 at 2018-06-30 14:39:11 +0530
+Cannot render console from 192.168.1.6! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SpotsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Il6oplN2jVM+N9Em1edEXtbF7iD76RxPQtu8T2qqdLvlH56U1g1suBsSNvJCmItZYIrloycY25UTPuBl5RVVrg==", "spot"=>{"name"=>"a", "availability"=>"1", "type_id"=>"1"}, "commit"=>"Create Spot"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mType Load (0.3ms)[0m  [1m[34mSELECT  "types".* FROM "types" WHERE "types"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (13.4ms)[0m  [1m[32mINSERT INTO "spots" ("name", "type_id", "created_at", "updated_at", "availability") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "a"], ["type_id", 1], ["created_at", "2018-06-30 09:09:11.954823"], ["updated_at", "2018-06-30 09:09:11.954823"], ["availability", "t"]]
+  [1m[35m (11.5ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://192.168.1.3:3011/spots/1
+Completed 302 Found in 31ms (ActiveRecord: 25.2ms)
+
+
+Started GET "/spots/1" for 192.168.1.6 at 2018-06-30 14:39:11 +0530
+Cannot render console from 192.168.1.6! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SpotsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSpot Load (0.3ms)[0m  [1m[34mSELECT  "spots".* FROM "spots" WHERE "spots"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering spots/show.html.erb within layouts/application
+  [1m[36mParking Load (0.4ms)[0m  [1m[34mSELECT "parkings".* FROM "parkings" WHERE "parkings"."spot_id" = $1 AND "parkings"."occupied" = $2[0m  [["spot_id", 1], ["occupied", "f"]]
+  Rendered spots/show.html.erb within layouts/application (5.7ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_navbar_user.html.erb (0.4ms)
+  Rendered layouts/_navbar.html.erb (2.2ms)
+Completed 200 OK in 59ms (Views: 41.9ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/parkings" for 192.168.1.6 at 2018-06-30 14:40:59 +0530
+Cannot render console from 192.168.1.6! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ParkingsController#index as HTML
+  Rendering parkings/index.html.erb within layouts/application
+  [1m[36mParking Load (0.5ms)[0m  [1m[34mSELECT "parkings".* FROM "parkings"[0m
+  Rendered parkings/index.html.erb within layouts/application (3.5ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_navbar_user.html.erb (0.5ms)
+  Rendered layouts/_navbar.html.erb (2.1ms)
+Completed 200 OK in 39ms (Views: 37.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/parkings/new" for 192.168.1.6 at 2018-06-30 14:41:01 +0530
+Cannot render console from 192.168.1.6! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ParkingsController#new as HTML
+  Rendering parkings/new.html.erb within layouts/application
+  [1m[36mSpot Load (0.3ms)[0m  [1m[34mSELECT "spots".* FROM "spots"[0m
+  [1m[36mVehicle Load (0.2ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles"[0m
+  Rendered parkings/_form.html.erb (6.2ms)
+  Rendered parkings/new.html.erb within layouts/application (7.6ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_navbar_user.html.erb (0.5ms)
+  Rendered layouts/_navbar.html.erb (2.1ms)
+Completed 200 OK in 41ms (Views: 39.2ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/parkings" for 192.168.1.6 at 2018-06-30 14:41:30 +0530
+Cannot render console from 192.168.1.6! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ParkingsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5dDlN+QD+SoQUONq6L1TF/wMshnglOudUzvxTyTGojIikdMFYXgYwTV1BL5/wpwQSkO5mjxlLEcC3q1lq3mDJw==", "parking"=>{"spot_id"=>"1", "vehicle_id"=>"1"}, "commit"=>"Create Parking"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSpot Load (0.2ms)[0m  [1m[34mSELECT  "spots".* FROM "spots" WHERE "spots"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mVehicle Load (0.2ms)[0m  [1m[34mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (17.6ms)[0m  [1m[32mINSERT INTO "parkings" ("spot_id", "vehicle_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["spot_id", 1], ["vehicle_id", 1], ["created_at", "2018-06-30 09:11:30.227769"], ["updated_at", "2018-06-30 09:11:30.227769"]]
+  [1m[36mType Load (0.2ms)[0m  [1m[34mSELECT  "types".* FROM "types" WHERE "types"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "vehicles" SET "parked" = $1, "updated_at" = $2 WHERE "vehicles"."id" = $3[0m  [["parked", "t"], ["updated_at", "2018-06-30 09:11:30.248317"], ["id", 1]]
+  [1m[36mType Load (0.2ms)[0m  [1m[34mSELECT  "types".* FROM "types" WHERE "types"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "spots" SET "availability" = $1, "updated_at" = $2 WHERE "spots"."id" = $3[0m  [["availability", "f"], ["updated_at", "2018-06-30 09:11:30.251625"], ["id", 1]]
+  [1m[35m (14.7ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://192.168.1.3:3011/parkings/1
+Completed 302 Found in 45ms (ActiveRecord: 34.0ms)
+
+
+Started GET "/parkings/1" for 192.168.1.6 at 2018-06-30 14:41:30 +0530
+Cannot render console from 192.168.1.6! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ParkingsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mParking Load (0.3ms)[0m  [1m[34mSELECT  "parkings".* FROM "parkings" WHERE "parkings"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering parkings/show.html.erb within layouts/application
+  Rendered parkings/show.html.erb within layouts/application (1.2ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_navbar_user.html.erb (0.5ms)
+  Rendered layouts/_navbar.html.erb (2.2ms)
+Completed 200 OK in 56ms (Views: 34.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/vehicles" for 192.168.1.6 at 2018-06-30 14:41:34 +0530
+Cannot render console from 192.168.1.6! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by VehiclesController#index as HTML
+  Rendering vehicles/index.html.erb within layouts/application
+  [1m[36mVehicle Load (0.3ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles"[0m
+  Rendered vehicles/index.html.erb within layouts/application (5.0ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_navbar_user.html.erb (0.5ms)
+  Rendered layouts/_navbar.html.erb (2.1ms)
+Completed 200 OK in 56ms (Views: 54.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/vehicles/1" for 192.168.1.6 at 2018-06-30 14:41:38 +0530
+Cannot render console from 192.168.1.6! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by VehiclesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mVehicle Load (0.2ms)[0m  [1m[34mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering vehicles/show.html.erb within layouts/application
+  [1m[36mType Load (0.3ms)[0m  [1m[34mSELECT  "types".* FROM "types" WHERE "types"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mVehicleFine Load (0.3ms)[0m  [1m[34mSELECT "vehicle_fines".* FROM "vehicle_fines" WHERE "vehicle_fines"."vehicle_id" = $1[0m  [["vehicle_id", 1]]
+  [1m[36mParking Load (0.3ms)[0m  [1m[34mSELECT  "parkings".* FROM "parkings" WHERE "parkings"."vehicle_id" = $1 AND "parkings"."occupied" = $2 LIMIT $3[0m  [["vehicle_id", 1], ["occupied", "t"], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered vehicles/show.html.erb within layouts/application (9.1ms)
+  Rendered layouts/_navbar_user.html.erb (0.4ms)
+  Rendered layouts/_navbar.html.erb (1.0ms)
+Completed 200 OK in 48ms (Views: 45.3ms | ActiveRecord: 1.4ms)
+
+
+Started PATCH "/parkings/1" for 192.168.1.6 at 2018-06-30 14:41:48 +0530
+Cannot render console from 192.168.1.6! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ParkingsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"irgq/vL3FWBBTVg1lDWgpWw5ZI0hEwYvex5qgBjQEbxN+RzMd4z0i2Rov+EDSm+i2nZvDv3iwfUq+zaql28wqQ==", "parking"=>{"occupied"=>"false"}, "commit"=>"free space", "id"=>"1"}
+  [1m[36mParking Load (0.2ms)[0m  [1m[34mSELECT  "parkings".* FROM "parkings" WHERE "parkings"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSpot Load (0.2ms)[0m  [1m[34mSELECT  "spots".* FROM "spots" WHERE "spots"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mVehicle Load (0.2ms)[0m  [1m[34mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "parkings" SET "occupied" = $1, "updated_at" = $2 WHERE "parkings"."id" = $3[0m  [["occupied", "f"], ["updated_at", "2018-06-30 09:11:48.356872"], ["id", 1]]
+  [1m[36mType Load (0.2ms)[0m  [1m[34mSELECT  "types".* FROM "types" WHERE "types"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "vehicles" SET "parked" = $1, "updated_at" = $2 WHERE "vehicles"."id" = $3[0m  [["parked", "f"], ["updated_at", "2018-06-30 09:11:48.359858"], ["id", 1]]
+  [1m[36mType Load (0.2ms)[0m  [1m[34mSELECT  "types".* FROM "types" WHERE "types"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "spots" SET "availability" = $1, "updated_at" = $2 WHERE "spots"."id" = $3[0m  [["availability", "t"], ["updated_at", "2018-06-30 09:11:48.362782"], ["id", 1]]
+  [1m[35m (12.5ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://192.168.1.3:3011/parkings/1
+Completed 302 Found in 24ms (ActiveRecord: 14.6ms)
+
+
+Started GET "/parkings/1" for 192.168.1.6 at 2018-06-30 14:41:48 +0530
+Cannot render console from 192.168.1.6! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ParkingsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mParking Load (0.2ms)[0m  [1m[34mSELECT  "parkings".* FROM "parkings" WHERE "parkings"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering parkings/show.html.erb within layouts/application
+  Rendered parkings/show.html.erb within layouts/application (2.0ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_navbar_user.html.erb (0.6ms)
+  Rendered layouts/_navbar.html.erb (2.5ms)
+Completed 200 OK in 46ms (Views: 44.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/parkings/1/edit" for 192.168.1.6 at 2018-06-30 14:41:57 +0530
+Cannot render console from 192.168.1.6! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ParkingsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mParking Load (0.3ms)[0m  [1m[34mSELECT  "parkings".* FROM "parkings" WHERE "parkings"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering parkings/edit.html.erb within layouts/application
+  [1m[36mSpot Load (0.3ms)[0m  [1m[34mSELECT "spots".* FROM "spots"[0m
+  [1m[36mVehicle Load (0.2ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles"[0m
+  Rendered parkings/_form.html.erb (4.9ms)
+  Rendered parkings/edit.html.erb within layouts/application (6.0ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_navbar_user.html.erb (0.5ms)
+  Rendered layouts/_navbar.html.erb (2.0ms)
+Completed 200 OK in 56ms (Views: 42.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/parkings" for 192.168.1.6 at 2018-06-30 14:42:01 +0530
+Cannot render console from 192.168.1.6! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ParkingsController#index as HTML
+  Rendering parkings/index.html.erb within layouts/application
+  [1m[36mParking Load (0.4ms)[0m  [1m[34mSELECT "parkings".* FROM "parkings"[0m
+  [1m[36mSpot Load (0.2ms)[0m  [1m[34mSELECT  "spots".* FROM "spots" WHERE "spots"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mVehicle Load (0.2ms)[0m  [1m[34mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered parkings/index.html.erb within layouts/application (7.1ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_navbar_user.html.erb (0.5ms)
+  Rendered layouts/_navbar.html.erb (2.1ms)
+Completed 200 OK in 41ms (Views: 39.4ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/types" for 192.168.1.6 at 2018-06-30 14:42:27 +0530
+Cannot render console from 192.168.1.6! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TypesController#index as HTML
+  Rendering types/index.html.erb within layouts/application
+  [1m[36mType Load (0.3ms)[0m  [1m[34mSELECT "types".* FROM "types"[0m
+  Rendered types/index.html.erb within layouts/application (5.2ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_navbar_user.html.erb (0.4ms)
+  Rendered layouts/_navbar.html.erb (2.1ms)
+Completed 200 OK in 41ms (Views: 39.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/fines" for 192.168.1.6 at 2018-06-30 14:42:31 +0530
+Cannot render console from 192.168.1.6! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by FinesController#index as HTML
+  Rendering fines/index.html.erb within layouts/application
+  [1m[36mFine Load (0.3ms)[0m  [1m[34mSELECT "fines".* FROM "fines"[0m
+  Rendered fines/index.html.erb within layouts/application (5.4ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_navbar_user.html.erb (0.4ms)
+  Rendered layouts/_navbar.html.erb (2.0ms)
+Completed 200 OK in 50ms (Views: 48.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/vehicles" for 192.168.1.6 at 2018-06-30 14:42:49 +0530
+Cannot render console from 192.168.1.6! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by VehiclesController#index as HTML
+  Rendering vehicles/index.html.erb within layouts/application
+  [1m[36mVehicle Load (0.3ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles"[0m
+  Rendered vehicles/index.html.erb within layouts/application (6.3ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_navbar_user.html.erb (0.5ms)
+  Rendered layouts/_navbar.html.erb (2.1ms)
+Completed 200 OK in 42ms (Views: 40.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/vehicles/1" for 192.168.1.6 at 2018-06-30 14:42:54 +0530
+Cannot render console from 192.168.1.6! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by VehiclesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mVehicle Load (0.2ms)[0m  [1m[34mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering vehicles/show.html.erb within layouts/application
+  [1m[36mType Load (0.3ms)[0m  [1m[34mSELECT  "types".* FROM "types" WHERE "types"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mVehicleFine Load (0.3ms)[0m  [1m[34mSELECT "vehicle_fines".* FROM "vehicle_fines" WHERE "vehicle_fines"."vehicle_id" = $1[0m  [["vehicle_id", 1]]
+  [1m[36mSpot Load (0.3ms)[0m  [1m[34mSELECT "spots".* FROM "spots" WHERE "spots"."type_id" = 1[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "types".* FROM "types" WHERE "types"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered vehicles/show.html.erb within layouts/application (8.6ms)
+  Rendered layouts/_navbar_user.html.erb (0.4ms)
+  Rendered layouts/_navbar.html.erb (1.0ms)
+Completed 200 OK in 42ms (Views: 39.2ms | ActiveRecord: 1.4ms)
+
+
+Started POST "/parkings" for 192.168.1.6 at 2018-06-30 14:43:04 +0530
+Cannot render console from 192.168.1.6! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ParkingsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QS7F4RLF7PRAEFgB2xWHONLmejmFjxYEICbMW7PrGeqGb/PTl74NH2U1v9VMakg/ZKlxull+0d5xw5BxPFQ4/w==", "parking"=>{"spot_id"=>"1", "vehicle_id"=>"1"}, "commit"=>"Park Here"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSpot Load (0.3ms)[0m  [1m[34mSELECT  "spots".* FROM "spots" WHERE "spots"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mVehicle Load (0.2ms)[0m  [1m[34mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "parkings" ("spot_id", "vehicle_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["spot_id", 1], ["vehicle_id", 1], ["created_at", "2018-06-30 09:13:04.472307"], ["updated_at", "2018-06-30 09:13:04.472307"]]
+  [1m[36mType Load (0.2ms)[0m  [1m[34mSELECT  "types".* FROM "types" WHERE "types"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "vehicles" SET "parked" = $1, "updated_at" = $2 WHERE "vehicles"."id" = $3[0m  [["parked", "t"], ["updated_at", "2018-06-30 09:13:04.475597"], ["id", 1]]
+  [1m[36mType Load (0.2ms)[0m  [1m[34mSELECT  "types".* FROM "types" WHERE "types"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "spots" SET "availability" = $1, "updated_at" = $2 WHERE "spots"."id" = $3[0m  [["availability", "f"], ["updated_at", "2018-06-30 09:13:04.478266"], ["id", 1]]
+  [1m[35m (25.4ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://192.168.1.3:3011/parkings/2
+Completed 302 Found in 37ms (ActiveRecord: 27.7ms)
+
+
+Started GET "/parkings/2" for 192.168.1.6 at 2018-06-30 14:43:04 +0530
+Cannot render console from 192.168.1.6! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ParkingsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mParking Load (0.2ms)[0m  [1m[34mSELECT  "parkings".* FROM "parkings" WHERE "parkings"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering parkings/show.html.erb within layouts/application
+  Rendered parkings/show.html.erb within layouts/application (1.9ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_navbar_user.html.erb (0.5ms)
+  Rendered layouts/_navbar.html.erb (2.1ms)
+Completed 200 OK in 41ms (Views: 38.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/parkings" for 192.168.1.6 at 2018-06-30 14:43:08 +0530
+Cannot render console from 192.168.1.6! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ParkingsController#index as HTML
+  Rendering parkings/index.html.erb within layouts/application
+  [1m[36mParking Load (0.5ms)[0m  [1m[34mSELECT "parkings".* FROM "parkings"[0m
+  [1m[36mSpot Load (0.2ms)[0m  [1m[34mSELECT  "spots".* FROM "spots" WHERE "spots"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mVehicle Load (0.2ms)[0m  [1m[34mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "spots".* FROM "spots" WHERE "spots"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered parkings/index.html.erb within layouts/application (8.0ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_navbar_user.html.erb (0.5ms)
+  Rendered layouts/_navbar.html.erb (2.1ms)
+Completed 200 OK in 44ms (Views: 42.0ms | ActiveRecord: 1.3ms)
+
+
+Started DELETE "/users/sign_out" for 192.168.1.6 at 2018-06-30 14:43:23 +0530
+Cannot render console from 192.168.1.6! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"+uTG1eRsDUEMeKm3wpe3AwtDNef+PWaC+1dPi+GCbXA9pfDnYRfsqildTmNV6HgEvQw+ZCLMoViqshOhbj1MZQ=="}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://192.168.1.3:3011/
+Completed 302 Found in 4ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 192.168.1.6 at 2018-06-30 14:43:23 +0530
+Cannot render console from 192.168.1.6! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by VehiclesController#index as HTML
+  Rendering vehicles/index.html.erb within layouts/application
+  [1m[36mVehicle Load (0.3ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles"[0m
+  Rendered vehicles/index.html.erb within layouts/application (6.2ms)
+  Rendered layouts/_navbar_guest.html.erb (0.3ms)
+  Rendered layouts/_navbar.html.erb (1.0ms)
+Completed 200 OK in 40ms (Views: 38.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/sign_in" for 192.168.1.6 at 2018-06-30 14:47:25 +0530
+Cannot render console from 192.168.1.6! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering /var/lib/gems/2.3.0/gems/devise-4.4.3/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /var/lib/gems/2.3.0/gems/devise-4.4.3/app/views/devise/shared/_links.html.erb (0.7ms)
+  Rendered /var/lib/gems/2.3.0/gems/devise-4.4.3/app/views/devise/sessions/new.html.erb within layouts/application (3.7ms)
+  Rendered layouts/_navbar_guest.html.erb (0.3ms)
+  Rendered layouts/_navbar.html.erb (0.9ms)
+Completed 200 OK in 51ms (Views: 49.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 192.168.1.6 at 2018-06-30 14:47:29 +0530
+Cannot render console from 192.168.1.6! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2xAUTdfzFNbkmIVsguVfDIbFZWGVbENnsChr3onxGU2LIO1kH4RSB9Ck8g58T+vwnpPuNo7AVXg+MvCOlj5SpQ==", "user"=>{"email"=>"shaiju8055@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"1"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "shaiju8055@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "users" SET "remember_created_at" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["remember_created_at", "2018-06-30 09:17:29.841147"], ["updated_at", "2018-06-30 09:17:29.841550"], ["id", 1]]
+  [1m[35m (50.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "users" SET "sign_in_count" = $1, "current_sign_in_at" = $2, "last_sign_in_at" = $3, "updated_at" = $4 WHERE "users"."id" = $5[0m  [["sign_in_count", 3], ["current_sign_in_at", "2018-06-30 09:17:29.893513"], ["last_sign_in_at", "2018-06-30 09:01:08.258604"], ["updated_at", "2018-06-30 09:17:29.894492"], ["id", 1]]
+  [1m[35m (8.0ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://192.168.1.3:3011/
+Completed 302 Found in 162ms (ActiveRecord: 59.8ms)
+
+
+Started GET "/" for 192.168.1.6 at 2018-06-30 14:47:29 +0530
+Cannot render console from 192.168.1.6! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by VehiclesController#index as HTML
+  Rendering vehicles/index.html.erb within layouts/application
+  [1m[36mVehicle Load (0.3ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles"[0m
+  Rendered vehicles/index.html.erb within layouts/application (6.2ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_navbar_user.html.erb (0.5ms)
+  Rendered layouts/_navbar.html.erb (2.3ms)
+Completed 200 OK in 44ms (Views: 42.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/vehicles/new" for 192.168.1.6 at 2018-06-30 14:47:36 +0530
+Cannot render console from 192.168.1.6! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by VehiclesController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering vehicles/new.html.erb within layouts/application
+  [1m[36mType Load (0.3ms)[0m  [1m[34mSELECT "types".* FROM "types"[0m
+  Rendered vehicles/_form.html.erb (14.5ms)
+  Rendered vehicles/new.html.erb within layouts/application (15.9ms)
+  Rendered layouts/_navbar_user.html.erb (0.4ms)
+  Rendered layouts/_navbar.html.erb (1.0ms)
+Completed 200 OK in 52ms (Views: 48.9ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/vehicles" for 192.168.1.6 at 2018-06-30 14:49:04 +0530
+Cannot render console from 192.168.1.6! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by VehiclesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1xiJUkSRzkquE4eCXhcVropB9P6B9ClTgtC2fmLy5f28AKyThCRI6OpPPnzJ6HEb0iWbFK0+OepRUQUZemH8Og==", "vehicle"=>{"file_name"=>#<ActionDispatch::Http::UploadedFile:0x007fc5446a6510 @tempfile=#<Tempfile:/tmp/RackMultipart20180630-5271-gex0q2.gif>, @original_filename="Square-Number-Plate.gif", @content_type="image/gif", @headers="Content-Disposition: form-data; name=\"vehicle[file_name]\"; filename=\"Square-Number-Plate.gif\"\r\nContent-Type: image/gif\r\n">, "name"=>"city", "model"=>"2018", "vnumber"=>"BP99NPC_", "type_id"=>"2", "insurance_expiry_date(1i)"=>"2019", "insurance_expiry_date(2i)"=>"6", "insurance_expiry_date(3i)"=>"30", "insurance_expiry_date(4i)"=>"09", "insurance_expiry_date(5i)"=>"17", "pollution_expiry_date(1i)"=>"2019", "pollution_expiry_date(2i)"=>"6", "pollution_expiry_date(3i)"=>"30", "pollution_expiry_date(4i)"=>"09", "pollution_expiry_date(5i)"=>"17", "chassis_number"=>"125125215", "engine_number"=>"965815655", "year_of_registration"=>"2018", "fuel_type"=>"diesel", "dealer_name"=>"peninsular honda", "class_of_vehicle"=>"lmv"}, "commit"=>"Create Vehicle"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mType Load (0.2ms)[0m  [1m[34mSELECT  "types".* FROM "types" WHERE "types"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "vehicles" ("file_name", "name", "model", "vnumber", "created_at", "updated_at", "type_id", "chassis_number", "engine_number", "year_of_registration", "fuel_type", "dealer_name", "class_of_vehicle", "insurance_expiry_date", "pollution_expiry_date") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15) RETURNING "id"[0m  [["file_name", "Square-Number-Plate.gif"], ["name", "city"], ["model", "2018"], ["vnumber", "BP99NPC_"], ["created_at", "2018-06-30 09:19:04.155015"], ["updated_at", "2018-06-30 09:19:04.155015"], ["type_id", 2], ["chassis_number", "125125215"], ["engine_number", "965815655"], ["year_of_registration", 2018], ["fuel_type", "diesel"], ["dealer_name", "peninsular honda"], ["class_of_vehicle", "lmv"], ["insurance_expiry_date", "2019-06-30 09:17:00"], ["pollution_expiry_date", "2019-06-30 09:17:00"]]
+  [1m[35m (16.0ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://192.168.1.3:3011/vehicles/2
+Completed 302 Found in 26ms (ActiveRecord: 17.1ms)
+
+
+Started GET "/vehicles/2" for 192.168.1.6 at 2018-06-30 14:49:04 +0530
+Cannot render console from 192.168.1.6! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by VehiclesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mVehicle Load (0.3ms)[0m  [1m[34mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering vehicles/show.html.erb within layouts/application
+  [1m[36mType Load (0.2ms)[0m  [1m[34mSELECT  "types".* FROM "types" WHERE "types"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mVehicleFine Load (0.1ms)[0m  [1m[34mSELECT "vehicle_fines".* FROM "vehicle_fines" WHERE "vehicle_fines"."vehicle_id" = $1[0m  [["vehicle_id", 2]]
+  [1m[36mSpot Load (0.2ms)[0m  [1m[34mSELECT "spots".* FROM "spots" WHERE "spots"."type_id" = 2[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered vehicles/show.html.erb within layouts/application (7.1ms)
+  Rendered layouts/_navbar_user.html.erb (0.4ms)
+  Rendered layouts/_navbar.html.erb (1.0ms)
+Completed 200 OK in 44ms (Views: 41.4ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/vehicles" for 192.168.1.6 at 2018-06-30 14:49:18 +0530
+Cannot render console from 192.168.1.6! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by VehiclesController#index as HTML
+  Rendering vehicles/index.html.erb within layouts/application
+  [1m[36mVehicle Load (0.3ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles"[0m
+  Rendered vehicles/index.html.erb within layouts/application (5.9ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_navbar_user.html.erb (0.5ms)
+  Rendered layouts/_navbar.html.erb (2.1ms)
+Completed 200 OK in 42ms (Views: 40.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/fines" for 192.168.1.6 at 2018-06-30 14:49:26 +0530
+Cannot render console from 192.168.1.6! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by FinesController#index as HTML
+  Rendering fines/index.html.erb within layouts/application
+  [1m[36mFine Load (0.3ms)[0m  [1m[34mSELECT "fines".* FROM "fines"[0m
+  Rendered fines/index.html.erb within layouts/application (3.6ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_navbar_user.html.erb (0.5ms)
+  Rendered layouts/_navbar.html.erb (2.2ms)
+Completed 200 OK in 38ms (Views: 37.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/types" for 192.168.1.6 at 2018-06-30 14:49:58 +0530
+Cannot render console from 192.168.1.6! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TypesController#index as HTML
+  Rendering types/index.html.erb within layouts/application
+  [1m[36mType Load (0.4ms)[0m  [1m[34mSELECT "types".* FROM "types"[0m
+  Rendered types/index.html.erb within layouts/application (4.5ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_navbar_user.html.erb (0.5ms)
+  Rendered layouts/_navbar.html.erb (2.2ms)
+Completed 200 OK in 51ms (Views: 49.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/types/new" for 192.168.1.6 at 2018-06-30 14:50:06 +0530
+Cannot render console from 192.168.1.6! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TypesController#new as HTML
+  Rendering types/new.html.erb within layouts/application
+  Rendered types/_form.html.erb (3.4ms)
+  Rendered types/new.html.erb within layouts/application (4.8ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_navbar_user.html.erb (0.5ms)
+  Rendered layouts/_navbar.html.erb (2.0ms)
+Completed 200 OK in 43ms (Views: 41.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/spots" for 192.168.1.6 at 2018-06-30 14:50:13 +0530
+Cannot render console from 192.168.1.6! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SpotsController#index as HTML
+  Rendering spots/index.html.erb within layouts/application
+  [1m[36mSpot Load (0.3ms)[0m  [1m[34mSELECT "spots".* FROM "spots"[0m
+  [1m[36mType Load (0.2ms)[0m  [1m[34mSELECT  "types".* FROM "types" WHERE "types"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered spots/index.html.erb within layouts/application (5.9ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_navbar_user.html.erb (0.5ms)
+  Rendered layouts/_navbar.html.erb (2.1ms)
+Completed 200 OK in 42ms (Views: 40.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/types" for 192.168.1.6 at 2018-06-30 14:50:49 +0530
+Cannot render console from 192.168.1.6! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TypesController#index as HTML
+  Rendering types/index.html.erb within layouts/application
+  [1m[36mType Load (0.3ms)[0m  [1m[34mSELECT "types".* FROM "types"[0m
+  Rendered types/index.html.erb within layouts/application (4.3ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_navbar_user.html.erb (0.5ms)
+  Rendered layouts/_navbar.html.erb (2.5ms)
+Completed 200 OK in 41ms (Views: 39.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/spots" for 192.168.1.6 at 2018-06-30 14:51:08 +0530
+Cannot render console from 192.168.1.6! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SpotsController#index as HTML
+  Rendering spots/index.html.erb within layouts/application
+  [1m[36mSpot Load (0.3ms)[0m  [1m[34mSELECT "spots".* FROM "spots"[0m
+  [1m[36mType Load (0.2ms)[0m  [1m[34mSELECT  "types".* FROM "types" WHERE "types"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered spots/index.html.erb within layouts/application (5.1ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_navbar_user.html.erb (0.5ms)
+  Rendered layouts/_navbar.html.erb (2.1ms)
+Completed 200 OK in 41ms (Views: 39.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/spots/new" for 192.168.1.6 at 2018-06-30 14:51:11 +0530
+Cannot render console from 192.168.1.6! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SpotsController#new as HTML
+  Rendering spots/new.html.erb within layouts/application
+  [1m[36mType Load (0.3ms)[0m  [1m[34mSELECT "types".* FROM "types"[0m
+  Rendered spots/_form.html.erb (7.3ms)
+  Rendered spots/new.html.erb within layouts/application (8.7ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_navbar_user.html.erb (0.5ms)
+  Rendered layouts/_navbar.html.erb (2.1ms)
+Completed 200 OK in 43ms (Views: 41.8ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/spots" for 192.168.1.6 at 2018-06-30 14:54:23 +0530
+Cannot render console from 192.168.1.6! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SpotsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"oF1rH3C8dcEgvb4AI3h+6drj+L64ndeeNhvk0mK8tBTLRU7esAnzY2ThB/60hxpcgoeXVJRXxyflmle1ei+t0w==", "spot"=>{"name"=>"level 0 bike", "availability"=>"1", "type_id"=>"1"}, "commit"=>"Create Spot"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mType Load (0.2ms)[0m  [1m[34mSELECT  "types".* FROM "types" WHERE "types"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "spots" ("name", "type_id", "created_at", "updated_at", "availability") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "level 0 bike"], ["type_id", 1], ["created_at", "2018-06-30 09:24:23.181327"], ["updated_at", "2018-06-30 09:24:23.181327"], ["availability", "t"]]
+  [1m[35m (16.7ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://192.168.1.3:3011/spots/2
+Completed 302 Found in 21ms (ActiveRecord: 17.4ms)
+
+
+Started GET "/spots/2" for 192.168.1.6 at 2018-06-30 14:54:23 +0530
+Cannot render console from 192.168.1.6! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SpotsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mSpot Load (0.3ms)[0m  [1m[34mSELECT  "spots".* FROM "spots" WHERE "spots"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering spots/show.html.erb within layouts/application
+  [1m[36mParking Load (0.3ms)[0m  [1m[34mSELECT "parkings".* FROM "parkings" WHERE "parkings"."spot_id" = $1 AND "parkings"."occupied" = $2[0m  [["spot_id", 2], ["occupied", "f"]]
+  Rendered spots/show.html.erb within layouts/application (4.3ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_navbar_user.html.erb (0.5ms)
+  Rendered layouts/_navbar.html.erb (2.1ms)
+Completed 200 OK in 51ms (Views: 48.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/spots" for 192.168.1.6 at 2018-06-30 14:54:48 +0530
+Cannot render console from 192.168.1.6! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SpotsController#index as HTML
+  Rendering spots/index.html.erb within layouts/application
+  [1m[36mSpot Load (0.3ms)[0m  [1m[34mSELECT "spots".* FROM "spots"[0m
+  [1m[36mType Load (0.2ms)[0m  [1m[34mSELECT  "types".* FROM "types" WHERE "types"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "types".* FROM "types" WHERE "types"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered spots/index.html.erb within layouts/application (7.6ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_navbar_user.html.erb (0.5ms)
+  Rendered layouts/_navbar.html.erb (2.1ms)
+Completed 200 OK in 43ms (Views: 40.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/fines" for 192.168.1.6 at 2018-06-30 14:54:56 +0530
+Cannot render console from 192.168.1.6! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by FinesController#index as HTML
+  Rendering fines/index.html.erb within layouts/application
+  [1m[36mFine Load (0.4ms)[0m  [1m[34mSELECT "fines".* FROM "fines"[0m
+  Rendered fines/index.html.erb within layouts/application (6.0ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_navbar_user.html.erb (0.5ms)
+  Rendered layouts/_navbar.html.erb (2.2ms)
+Completed 200 OK in 42ms (Views: 40.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/parkings" for 192.168.1.6 at 2018-06-30 14:55:01 +0530
+Cannot render console from 192.168.1.6! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ParkingsController#index as HTML
+  Rendering parkings/index.html.erb within layouts/application
+  [1m[36mParking Load (0.4ms)[0m  [1m[34mSELECT "parkings".* FROM "parkings"[0m
+  [1m[36mSpot Load (0.3ms)[0m  [1m[34mSELECT  "spots".* FROM "spots" WHERE "spots"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mVehicle Load (0.3ms)[0m  [1m[34mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "spots".* FROM "spots" WHERE "spots"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered parkings/index.html.erb within layouts/application (8.4ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_navbar_user.html.erb (0.5ms)
+  Rendered layouts/_navbar.html.erb (2.0ms)
+Completed 200 OK in 45ms (Views: 42.7ms | ActiveRecord: 1.3ms)
+
+
+Started DELETE "/users/sign_out" for 192.168.1.6 at 2018-06-30 14:55:15 +0530
+Cannot render console from 192.168.1.6! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"tmwqUtaElQfySeNosTQ08W55clCz5jNkVPqnv8WOqpHddA+TFjETpbYVWpYmy1BENh0dup8sI92HexTY3R2zVg=="}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "users" SET "remember_created_at" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["remember_created_at", nil], ["updated_at", "2018-06-30 09:25:15.923356"], ["id", 1]]
+  [1m[35m (34.6ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://192.168.1.3:3011/
+Completed 302 Found in 40ms (ActiveRecord: 35.3ms)
+
+
+Started GET "/" for 192.168.1.6 at 2018-06-30 14:55:15 +0530
+Cannot render console from 192.168.1.6! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by VehiclesController#index as HTML
+  Rendering vehicles/index.html.erb within layouts/application
+  [1m[36mVehicle Load (0.4ms)[0m  [1m[34mSELECT "vehicles".* FROM "vehicles"[0m
+  Rendered vehicles/index.html.erb within layouts/application (7.8ms)
+  Rendered layouts/_navbar_guest.html.erb (0.3ms)
+  Rendered layouts/_navbar.html.erb (1.0ms)
+Completed 200 OK in 47ms (Views: 45.5ms | ActiveRecord: 0.4ms)
+
+
