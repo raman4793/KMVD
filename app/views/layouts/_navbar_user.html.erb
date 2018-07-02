@@ -18,8 +18,10 @@
       <ul class="nav navbar-nav navbar-right">
         <li><%= link_to 'Parkings' ,parkings_path%></li>
         <li><%= link_to 'Spots' ,spots_path%></li>
+        <li><%= link_to 'Batch Spots' ,spots_batch_new_path%></li>
         <li><%= link_to 'Parking Spot Type' ,types_path%></li>
         <li><%= link_to 'Fines' ,fines_path%></li>
+        <li><%= link_to 'Vehicle Fines' ,vehicle_fines_path%></li>
         <li><%= link_to 'Vehicles' ,vehicles_path%></li>
         <li><%= link_to 'Logout' ,destroy_user_session_path, method: :delete%></li>
 

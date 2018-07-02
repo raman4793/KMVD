@@ -32,6 +32,9 @@
   </tr>
   </thead>
   <tbody>
+  <% if !@spot.availability? %>
+    <%= link_to @spot.parkings.last.vehicle.name, vehicle_path(@spot.parkings.last.vehicle) %> Parked Here
+  <% end %>
   <% @spot.parkings.where(occupied: false).each do |parking| %>
     <tr>
       <td><%= link_to parking.id, parking_path(parking) %></td>

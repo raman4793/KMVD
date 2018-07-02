@@ -39,7 +39,7 @@ gem 'carrierwave'
 gem 'simple_form'
 
 gem 'jquery-datatables-rails'
-
+gem 'by_star', git: "git://github.com/radar/by_star"
 gem "therubyracer"
 gem "less-rails" #Sprockets (what Rails 3.1 uses for its asset pipeline) supports LESS
 gem "twitter-bootstrap-rails"

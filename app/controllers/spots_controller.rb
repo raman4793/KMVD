@@ -17,6 +17,22 @@ class SpotsController < ApplicationController
     @spot = Spot.new
   end
 
+  def batch_new
+
+  end
+
+  def batch_create
+    no = params[:number]
+    lvl= params[:level]
+    tid= params[:type][:type_id]
+    if no.nil? or lvl.nil? or tid.nil?
+    else
+      no.to_i.times do |i|
+        Spot.create(name: "#{lvl}-#{i}", type_id: tid, availability:  true)
+      end
+    end
+  end
+
   # GET /spots/1/edit
   def edit
   end
@@ -25,7 +41,7 @@ class SpotsController < ApplicationController
   # POST /spots.json
   def create
     @spot = Spot.new(spot_params)
-
+    @spot.availability=true
     respond_to do |format|
       if @spot.save
         format.html { redirect_to @spot, notice: 'Spot was successfully created.' }

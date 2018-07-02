@@ -11,7 +11,7 @@
   <%= f.label :vnumber_cont %>
   <%= f.search_field :vnumber_cont %>
   <%= f.submit %>
-  <input name="myFile" type="file">
+  <input name="myFile" type="file" id="file_name">
 <% end %>
 <br>
 <table class="table table-striped" id="vehicles">
@@ -70,11 +70,13 @@
                 var img = new Image();
                 img.src = reader.result;
                 img.onload = function(){
+                    document.getElementById('number-plate').innerHTML = ''
+                    document.getElementById('number-plate').appendChild(img)
                     var string = OCRAD(img);
                     $('#q_vnumber_cont').val(string)
                 }
             }
-            reader.readAsDataURL(document.getElementById('vehicle_file_name').files[0])
+            reader.readAsDataURL(document.getElementById('file_name').files[0])
 
         });
     });

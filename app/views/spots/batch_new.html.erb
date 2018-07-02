@@ -1,0 +1,8 @@
+<%= form_tag spots_batch_create_path, method: :post do %>
+  <%= label_tag :number_of_spots %>
+  <%= text_field_tag :number %>
+  <%= label_tag :level %>
+  <%= text_field_tag :level %>
+  <%= collection_select(:type, :type_id, Type.all, :id, :name, prompt: true)  %>
+  <%= submit_tag :submit %>
+<% end %>

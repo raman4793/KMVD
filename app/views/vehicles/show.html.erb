@@ -25,7 +25,7 @@
           <li>Engine number : <%= @vehicle.engine_number %></li>
           <li>Year of registration : <%= @vehicle.year_of_registration %></li>
           <li>Fuel type : <%= @vehicle.fuel_type %></li>
-          <li>Type of Car : <%= @vehicle.type.name %></li>
+          <li>Type of Vehicle : <%= @vehicle.type.name %></li>
         </ul>
       </div>
 
@@ -49,12 +49,20 @@
         <th>Fined on</th>
       </thead>
       <tbody>
-        <% @vehicle.vehicle_fines.each do |vehicle_fine| %>
+        <% if @vehicle.vehicle_fines.count > 0 %>
+          <% @vehicle.vehicle_fines.each do |vehicle_fine| %>
+            <tr>
+              <td><%= vehicle_fine.fine.reason %></td>
+              <td><%= vehicle_fine.fine.amt %></td>
+              <td><%= l vehicle_fine.created_at %></td>
+              <td><a class="btn btn-info" target="_blank" href="https://nationalinsuranceindia.nic.co.in/portal/page/portal/Corporate/Home?Language=English">Pay</a></td>
+            </tr>
+          <% end %>
+        <% else %>
           <tr>
-            <td><%= vehicle_fine.fine.reason %></td>
-            <td><%= vehicle_fine.fine.amt %></td>
-            <td><%= l vehicle_fine.created_at %></td>
-            <td><a class="btn btn-info" target="_blank" href="https://nationalinsuranceindia.nic.co.in/portal/page/portal/Corporate/Home?Language=English">Pay</a></td>
+            <td colspan="3">
+              No Fines for this vehicle
+            </td>
           </tr>
         <% end %>
       </tbody>
@@ -64,6 +72,7 @@
     <h3>Parking Spots</h3>
     <% if @vehicle.parked? %>
       <% parking = @vehicle.parkings.find_by(occupied: true) %>
+      Parked at <%= link_to parking.spot.name, spot_url(parking.spot) %>
       <%= form_for parking do |f| %>
         <%= f.hidden_field :occupied, value: false %>
         <%= f.submit 'free space' %>
@@ -80,7 +89,7 @@
         </tr>
         </thead>
         <tbody>
-        <% Spot.where(type: @vehicle.type).each do |spot| %>
+        <% Spot.where(type: @vehicle.type, availability: true).each do |spot| %>
           <tr>
             <td><%= link_to spot.id, spot_path(spot) %></td>
             <td><%= spot.name %></td>

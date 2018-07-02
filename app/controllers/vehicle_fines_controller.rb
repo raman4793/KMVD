@@ -26,7 +26,6 @@ class VehicleFinesController < ApplicationController
   # POST /vehicle_fines.json
   def create
     @vehicle_fine = VehicleFine.new(vehicle_fine_params)
-    raise
     respond_to do |format|
       if @vehicle_fine.save
         format.html { redirect_to @vehicle_fine, notice: 'Vehicle fine was successfully created.' }

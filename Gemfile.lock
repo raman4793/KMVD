@@ -1,3 +1,10 @@
+GIT
+  remote: git://github.com/radar/by_star
+  revision: 422c06ec1ea8ce633aca014a4403fbac92630057
+  specs:
+    by_star (3.0.0)
+      activesupport (> 3)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -211,6 +218,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  by_star!
   byebug
   carrierwave
   coffee-rails (~> 4.2)
