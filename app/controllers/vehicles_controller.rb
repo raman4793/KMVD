@@ -8,7 +8,6 @@ class VehiclesController < ApplicationController
   def index
     @q = Vehicle.ransack(params[:q])
     @vehicles = @q.result(distinct: true)
-    @vehicles = Vehicle.all
   end
 
   # GET /vehicles/1
